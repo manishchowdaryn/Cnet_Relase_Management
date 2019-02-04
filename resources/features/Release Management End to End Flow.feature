@@ -51,7 +51,7 @@ Feature: Release Management Automation Scenarios
 
     Examples: 
       | Username               | Password | ReleaseName             | Description         | EnvironmentName        | WorkflowName | stageName | TaskName    | PathName | Host | AnsibleUserName | AnsiblePassword | TemplateName   | TargetEnvironmentName       | ApplicationStatus |
-      | admin@matildacloud.com | matilda  | Feb04_Release_Version10 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | AnsibleTask | Path     | 8080 | admin           | admin           | Template_Feb04 | New_TargetEnvironment_Feb04 | Success           |
+      | admin@matildacloud.com | matilda  | Feb04_Release_Version14 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | AnsibleTask | Path     | 8080 | admin           | admin           | Template_Feb04 | New_TargetEnvironment_Feb04 | Success           |
 
   @ReleaseManagement_Create_Release_Using_Existing_Template
   Scenario Outline: Release_Management(Create Release using Existing Template) in Microsoft Edge
@@ -84,4 +84,4 @@ Feature: Release Management Automation Scenarios
 
     Examples: 
       | ReleaseName             | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
-      | Feb04_Release_Version11 | Release Description | New_Enironment_Version | NewWFNAB     | Success           |
+      | Feb04_Release_Version15 | Release Description | New_Enironment_Version | NewWFNAB     | Success           |

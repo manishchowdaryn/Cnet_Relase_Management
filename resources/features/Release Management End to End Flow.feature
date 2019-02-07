@@ -51,7 +51,7 @@ Feature: Release Management Automation Scenarios
 
     Examples: 
       | Username               | Password | ReleaseName            | Description         | EnvironmentName        | WorkflowName | stageName | TaskName    | PathName | Host | AnsibleUserName | AnsiblePassword | TemplateName   | TargetEnvironmentName       | ApplicationStatus |
-      | admin@matildacloud.com | matilda  | Feb06_Release_Version5 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | AnsibleTask | Path     | 8080 | admin           | admin           | Template_Feb06 | New_TargetEnvironment_Feb06 | InProgress           |
+      | admin@matildacloud.com | matilda  | Feb07_Release_Version1 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | AnsibleTask | Path     | 8080 | admin           | admin           | Template_Feb07 | New_TargetEnvironment_Feb07 | InProgress        |
 
   @ReleaseManagement_Create_Release_Using_Existing_Template
   Scenario Outline: Release_Management(Create Release using Existing Template) in Chrome
@@ -84,4 +84,4 @@ Feature: Release Management Automation Scenarios
 
     Examples: 
       | ReleaseName            | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
-      | Feb06_Release_Version6 | Release Description | New_Enironment_Version | NewWFNAB     | InProgress           |
+      | Feb07_Release_Version2 | Release Description | New_Enironment_Version | NewWFNAB     | InProgress        |

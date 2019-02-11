@@ -46,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Feb 4, 2019 11:04:43 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 11, 2019 09:40:58 AM</span>
 				</a>
 			</li>
 			<li>
@@ -73,6 +73,7 @@
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -149,10 +150,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -164,10 +165,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='97.222%'><span class='strong'>70</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='87.5%'><span class='strong'>63</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='2.778%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='1.389%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='11.111%'>8</span> others
 				</div>
 			</div>
 		</div>
@@ -184,25 +185,25 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Release Management Automation Scenarios</span>
-						<span class='test-time'>Feb 4, 2019 11:04:43 AM</span>
+						<span class='test-time'>Feb 11, 2019 09:40:58 AM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenariooutline node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 1m 5s+913ms</span>
+<div class='scenariooutline node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 2m 1s+487ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">Release_Management(Create New Release) in IE</span>
+		<span class="desc-text">Release_Management(Create New Release) in Chrome</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario fail' status='fail'>
+		<li test-id='3' class='node scenario pass' status='pass'>
 			<div class='category-list'>
 				<span class='category label white-text'>@ReleaseManagement_Create_New_Release</span>
 			</div>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">Release_Management(Create New Release) in IE</span>
+			<span class="bdd-step-name">Release_Management(Create New Release) in Chrome</span>
 			
 				<ul class='steps'>
 					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
@@ -226,7 +227,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='9' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Enter Release Name as "Feb04_Release_Version5"</span>
+						<span class="bdd-step-name">And Enter Release Name as "Feb11_Release_Version1"</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='10' class='node and pass' status='pass'><b>And</b>
@@ -343,9 +344,6 @@
 					</li>
 					<li test-id='38' class='node then pass' status='pass'><b>Then</b>
 						<span class="bdd-step-name">Then Click on Save as Template</span>
-						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="./FailedScreenshot1.jpg"><i class='material-icons'>panorama</i></a></li>
-						</ul>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='39' class='node and pass' status='pass'><b>And</b>
@@ -353,7 +351,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='40' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Enter Template Name as "Template_Feb01"</span>
+						<span class="bdd-step-name">And Enter Template Name as "Template_Feb11"</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='41' class='node then pass' status='pass'><b>Then</b>
@@ -369,7 +367,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='44' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Enter Target Environment Name as "New_TargetEnvironment_Feb01"</span>
+						<span class="bdd-step-name">And Enter Target Environment Name as "New_TargetEnvironment_Feb11"</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='45' class='node and pass' status='pass'><b>And</b>
@@ -388,32 +386,19 @@
 						<span class="bdd-step-name">Then Click on Start Environment Release Icon</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='49' class='node then fail' status='fail'><b>Then</b>
-						<span class="bdd-step-name">Then Verify the Status as "Success"</span>
-						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="./FailedScreenshot2.jpg"><i class='material-icons'>panorama</i></a></li>
-						</ul>
-							<div class='pre'><pre>java.lang.AssertionError: expected [Success] but found [InProgress]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at reusableFunction.Abstract.validation(Abstract.java:127)
-	at steps.ReleaseManagementSteps.VerifyStatus(ReleaseManagementSteps.java:700)
-	at ?.Then Verify the Status as "Success"(resources/features/Release Management End to End Flow.feature:50)
-</pre></div>
+					<li test-id='49' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then Verify the Status as "InProgress"</span>
+							<div class='pre'>passed</div>
 					</li>
 				</ul>
 		</li>
 	</ul>
 </div>
 <div class='scenariooutline node' test-id='50' status='fail'>
-	<span class='duration right label'>0h 0m 30s+526ms</span>
+	<span class='duration right label'>0h 0m 13s+273ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">Release_Management(Create Release using Existing Template) in IE</span>
+		<span class="desc-text">Release_Management(Create Release using Existing Template) in Chrome</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='51' class='node scenario fail' status='fail'>
@@ -423,7 +408,7 @@
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">Release_Management(Create Release using Existing Template) in IE</span>
+			<span class="bdd-step-name">Release_Management(Create Release using Existing Template) in Chrome</span>
 			
 				<ul class='steps'>
 					<li test-id='52' class='node then pass' status='pass'><b>Then</b>
@@ -439,7 +424,7 @@
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='55' class='node and pass' status='pass'><b>And</b>
-						<span class="bdd-step-name">And Enter Release Name as "Feb04_Release_Version7"</span>
+						<span class="bdd-step-name">And Enter Release Name as "Feb11_Release_Version2"</span>
 							<div class='pre'>passed</div>
 					</li>
 					<li test-id='56' class='node and pass' status='pass'><b>And</b>
@@ -494,54 +479,71 @@
 						<span class="bdd-step-name">Then Click on Create Workflow Icon</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='69' class='node and pass' status='pass'><b>And</b>
+					<li test-id='69' class='node and fail' status='fail'><b>And</b>
 						<span class="bdd-step-name">And Click on Workflow Name Text Box</span>
-							<div class='pre'>passed</div>
+							<div class='pre'><textarea>org.openqa.selenium.WebDriverException: unknown error: Element <input class="form-control m-input ng-untouched ng-pristine ng-invalid k-textbox" formcontrolname="name" kendotextbox="" placeholder="Name" type="name" ng-reflect-name="name"> is not clickable at point (104, 15). Other element would receive the click: <img alt="" class="img-responsive" src="./assets/demo/demo5/media/img/logo/Logo.svg" width="75px">
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'LAPTOP-9PIK1VTN', ip: '192.168.20.212', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\User\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}
+Session ID: de713c894d626ac0189d93bcb8e49a7f
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy18.click(Unknown Source)
+	at steps.ReleaseManagementSteps.ClickWorkflowName(ReleaseManagementSteps.java:254)
+	at ?.And Click on Workflow Name Text Box(resources/features/Release Management End to End Flow.feature:75)
+</textarea></div>
 					</li>
-					<li test-id='70' class='node and pass' status='pass'><b>And</b>
+					<li test-id='70' class='node and skip' status='skip'><b>And</b>
 						<span class="bdd-step-name">And Enter Workflow Name as "NewWFNAB"</span>
-							<div class='pre'>passed</div>
+							<div class='pre'>skipped</div>
 					</li>
-					<li test-id='71' class='node and pass' status='pass'><b>And</b>
+					<li test-id='71' class='node and skip' status='skip'><b>And</b>
 						<span class="bdd-step-name">And Click on Use Template and Select Template</span>
-							<div class='pre'>passed</div>
+							<div class='pre'>skipped</div>
 					</li>
-					<li test-id='72' class='node and pass' status='pass'><b>And</b>
+					<li test-id='72' class='node and skip' status='skip'><b>And</b>
 						<span class="bdd-step-name">And Click on Template version and Select Version</span>
-							<div class='pre'>passed</div>
+							<div class='pre'>skipped</div>
 					</li>
-					<li test-id='73' class='node and pass' status='pass'><b>And</b>
+					<li test-id='73' class='node and skip' status='skip'><b>And</b>
 						<span class="bdd-step-name">And Click Frequency and Select Frequency</span>
-							<div class='pre'>passed</div>
+							<div class='pre'>skipped</div>
 					</li>
-					<li test-id='74' class='node then pass' status='pass'><b>Then</b>
+					<li test-id='74' class='node then skip' status='skip'><b>Then</b>
 						<span class="bdd-step-name">Then Click on Save</span>
-							<div class='pre'>passed</div>
+							<div class='pre'>skipped</div>
 					</li>
-					<li test-id='75' class='node then pass' status='pass'><b>Then</b>
+					<li test-id='75' class='node then skip' status='skip'><b>Then</b>
 						<span class="bdd-step-name">Then Click on Save Workflow button</span>
-							<div class='pre'>passed</div>
+							<div class='pre'>skipped</div>
 					</li>
-					<li test-id='76' class='node then pass' status='pass'><b>Then</b>
+					<li test-id='76' class='node then skip' status='skip'><b>Then</b>
 						<span class="bdd-step-name">Then Click on Start Environment Release Icon</span>
-							<div class='pre'>passed</div>
+							<div class='pre'>skipped</div>
 					</li>
-					<li test-id='77' class='node then fail' status='fail'><b>Then</b>
-						<span class="bdd-step-name">Then Verify the Status as "Success"</span>
-						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="./FailedScreenshot3.jpg"><i class='material-icons'>panorama</i></a></li>
-						</ul>
-							<div class='pre'><pre>java.lang.AssertionError: expected [Success] but found [Configured]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at reusableFunction.Abstract.validation(Abstract.java:127)
-	at steps.ReleaseManagementSteps.VerifyStatus(ReleaseManagementSteps.java:700)
-	at ?.Then Verify the Status as "Success"(resources/features/Release Management End to End Flow.feature:83)
-</pre></div>
+					<li test-id='77' class='node then skip' status='skip'><b>Then</b>
+						<span class="bdd-step-name">Then Verify the Status as "InProgress"</span>
+							<div class='pre'>skipped</div>
 					</li>
 				</ul>
 		</li>
@@ -603,13 +605,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@ReleaseManagement_Create_New_Release</span>
 						<span class='category-status right'>
-							<span class='label fail'>1</span>
+							<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -624,9 +626,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 4, 2019 11:04:43 AM</td>
-										<td class='linked' test-id='3'>Release Management Automation Scenarios.Release_Management(Create New Release) in IE.Release_Management(Create New Release) in IE</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td>Feb 11, 2019 09:40:58 AM</td>
+										<td class='linked' test-id='3'>Release Management Automation Scenarios.Release_Management(Create New Release) in Chrome.Release_Management(Create New Release) in Chrome</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -658,8 +660,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 4, 2019 11:05:49 AM</td>
-										<td class='linked' test-id='51'>Release Management Automation Scenarios.Release_Management(Create Release using Existing Template) in IE.Release_Management(Create Release using Existing Template) in IE</td>
+										<td>Feb 11, 2019 09:43:00 AM</td>
+										<td class='linked' test-id='51'>Release Management Automation Scenarios.Release_Management(Create Release using Existing Template) in Chrome.Release_Management(Create Release using Existing Template) in Chrome</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
@@ -706,8 +708,8 @@
 
                         <li class='exception displayed active'>
                             <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.AssertionError</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+                                <span class='exception-name'>org.openqa.selenium.WebDriverException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
                             </div>
                             <div class='exception-content hide'>
                                 <div class='exception-tests'>
@@ -721,34 +723,39 @@
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Feb 4, 2019 11:05:44 AM</td>
-                                                        <td class='linked' test-id='49'>Release Management Automation Scenarios.Release_Management(Create New Release) in IE.Release_Management(Create New Release) in IE.Then Verify the Status as "Success"</td>
-                                                        <td><pre><pre>java.lang.AssertionError: expected [Success] but found [InProgress]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at reusableFunction.Abstract.validation(Abstract.java:127)
-	at steps.ReleaseManagementSteps.VerifyStatus(ReleaseManagementSteps.java:700)
-	at ?.Then Verify the Status as "Success"(resources/features/Release Management End to End Flow.feature:50)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Feb 4, 2019 11:06:14 AM</td>
-                                                        <td class='linked' test-id='77'>Release Management Automation Scenarios.Release_Management(Create Release using Existing Template) in IE.Release_Management(Create Release using Existing Template) in IE.Then Verify the Status as "Success"</td>
-                                                        <td><pre><pre>java.lang.AssertionError: expected [Success] but found [Configured]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at reusableFunction.Abstract.validation(Abstract.java:127)
-	at steps.ReleaseManagementSteps.VerifyStatus(ReleaseManagementSteps.java:700)
-	at ?.Then Verify the Status as "Success"(resources/features/Release Management End to End Flow.feature:83)
-</pre></pre></td>
+                                                        <td>Feb 11, 2019 09:43:12 AM</td>
+                                                        <td class='linked' test-id='69'>Release Management Automation Scenarios.Release_Management(Create Release using Existing Template) in Chrome.Release_Management(Create Release using Existing Template) in Chrome.And Click on Workflow Name Text Box</td>
+                                                        <td><pre><textarea>org.openqa.selenium.WebDriverException: unknown error: Element <input class="form-control m-input ng-untouched ng-pristine ng-invalid k-textbox" formcontrolname="name" kendotextbox="" placeholder="Name" type="name" ng-reflect-name="name"> is not clickable at point (104, 15). Other element would receive the click: <img alt="" class="img-responsive" src="./assets/demo/demo5/media/img/logo/Logo.svg" width="75px">
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'LAPTOP-9PIK1VTN', ip: '192.168.20.212', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\User\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}
+Session ID: de713c894d626ac0189d93bcb8e49a7f
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy18.click(Unknown Source)
+	at steps.ReleaseManagementSteps.ClickWorkflowName(ReleaseManagementSteps.java:254)
+	at ?.And Click on Workflow Name Text Box(resources/features/Release Management End to End Flow.feature:75)
+</textarea></pre></td>
                                                     </tr>
                                         </tbody>
                                     </table>
@@ -792,19 +799,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 4, 2019 11:04:43 AM</div>
+					<div class='panel-lead'>Feb 11, 2019 09:40:58 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 4, 2019 11:06:21 AM</div>
+			 		<div class='panel-lead'>Feb 11, 2019 09:43:14 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>98,190ms</div>
+					<div class='panel-lead'>136,461ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -840,8 +847,8 @@
 						</tr>
 						<tr>
 							<td>@ReleaseManagement_Create_New_Release</td>
-							<td>0</td>
 							<td>1</td>
+							<td>0</td>
 							<td>0</td>
 						</tr>
 						<tr>
@@ -871,23 +878,23 @@
 				skipParent: 0,
 				exceptionsParent: 1,
 				
-				passChild: 0,
-				failChild: 2,
+				passChild: 1,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 2,
+				exceptionsChild: 1,
 				
-				passGrandChild: 70,
-				failGrandChild: 2,
+				passGrandChild: 63,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 8,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 2,
+				exceptionsGrandChild: 9,
 			};
 		</script>
 		

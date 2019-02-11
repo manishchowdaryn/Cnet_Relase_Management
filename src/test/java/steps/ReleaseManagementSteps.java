@@ -322,12 +322,11 @@ public class ReleaseManagementSteps extends BaseUtil {
 		WebElement execution = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.execution());
 		Abstract.moveToElement(base, execution);
 		logger.info("Mouse Over on Execution");
-Thread.sleep(2000);
+
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		WebElement anisible = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.anisible());
 		Abstract.moveToElement(base, anisible);
 		logger.info("Mouse Over on Anisible");
-		Thread.sleep(2000);
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		WebElement clickOnPlayBookHost = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.clickOnPlayBookHost());
@@ -709,7 +708,7 @@ Thread.sleep(2000);
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		WebElement releaseList = Abstract.waitUntilConditionSatisfy(base,
 				DashboardPage.releaseList());
-		Thread.sleep(3000);
+	Thread.sleep(3000);
 		releaseList.isEnabled();
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		releaseList.click();

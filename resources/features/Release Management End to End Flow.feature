@@ -50,8 +50,8 @@ Feature: Release Management Automation Scenarios
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | Username               | Password | ReleaseName             | Description         | EnvironmentName        | WorkflowName | stageName | TaskName    | PathName | Host | AnsibleUserName | AnsiblePassword | TemplateName   | TargetEnvironmentName       | ApplicationStatus |
-      | admin@matildacloud.com | matilda  | Feb12_Release_Version17 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | AnsibleTask | Path     | 8080 | admin           | admin           | Template_Feb12 | New_TargetEnvironment_Feb12 | Success           |
+      | Username               | Password | ReleaseName            | Description         | EnvironmentName        | WorkflowName | stageName | TaskName    | PathName | Host | AnsibleUserName | AnsiblePassword | TemplateName   | TargetEnvironmentName       | ApplicationStatus |
+      | admin@matildacloud.com | matilda  | Feb12_Release_Version1 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | AnsibleTask | Path     | 8080 | admin           | admin           | Template_Feb12 | New_TargetEnvironment_Feb12 | Success           |
 
   @ReleaseManagement_Create_Release_Using_Existing_Template
   Scenario Outline: Release_Management(Create Release using Existing Template) in Chrome
@@ -83,5 +83,5 @@ Feature: Release Management Automation Scenarios
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | ReleaseName             | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
-      | Feb12_Release_Version18 | Release Description | New_Enironment_Version | NewWFNAB     | Success           |
+      | ReleaseName            | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
+      | Feb12_Release_Version2 | Release Description | New_Enironment_Version | NewWFNAB     | Success           |

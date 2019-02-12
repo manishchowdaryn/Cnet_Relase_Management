@@ -70,7 +70,7 @@ public class Hook extends BaseUtil {
 
 			} else if (scenarioName.contains("Microsoft Edge")) {
 				File file = new File("driver//MicrosoftWebDriver.exe");
-				System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+				System.setProperty("webdriver.edge.driver", file.getAbsolutePath());
 
 				if (base.driver == null) {
 

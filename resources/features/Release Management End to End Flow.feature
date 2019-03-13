@@ -5,13 +5,15 @@ Feature: Release Management Automation Scenarios
     Given Launch Browser and access the Matilda URL
     Then Verify whether Login page is correctly opened or not
     And Enter Username and Password as "<Username>" and "<Password>"
+    Then Click on Release List Tab
     Then Click on Create New Release Button
+    Then Click on Release Type and Select Release Type
     And Click on Release Name Text Box
     And Enter Release Name as "<ReleaseName>"
     And Click on Project Field and Select Project
     And Click on Application and Select Application
     And Click on Release Version and Select Release Version
-    And Click on Date picker and Select Today
+    #And Click on Date picker and Select Today
     And Click Description
     And Enter Description as "<Description>"
     Then Click Save and Next
@@ -50,19 +52,20 @@ Feature: Release Management Automation Scenarios
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | Username               | Password | ReleaseName            | Description         | EnvironmentName        | WorkflowName | stageName | TaskName    | PathName | Host | AnsibleUserName | AnsiblePassword | TemplateName   | TargetEnvironmentName       | ApplicationStatus |
-      | admin@matildacloud.com | matilda  | Feb12_Release_Version1 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | AnsibleTask | Path     | 8080 | admin           | admin           | Template_Feb12 | New_TargetEnvironment_Feb12 | Success           |
+      | Username                | Password          | ReleaseName               | Description         | EnvironmentName        | WorkflowName | stageName | TaskName    | PathName | Host | AnsibleUserName | AnsiblePassword | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
+      | ananda@matildacloud.com | Ananda123@Matilda | March13_Release_Version26 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | AnsibleTask | Path     | 8080 | admin           | admin           | Template_March13 | New_TargetEnvironment_March13 | Success           |
 
   @ReleaseManagement_Create_Release_Using_Existing_Template
   Scenario Outline: Release_Management(Create Release using Existing Template) in Chrome
-    Then Click on Release List Tab
+    Then Click on Release List Tab for Second Execution
     Then Click on Create New Release Button
+    Then Click on Release Type and Select Release Type
     And Click on Release Name Text Box
     And Enter Release Name as "<ReleaseName>"
     And Click on Project Field and Select Project
     And Click on Application and Select Application
     And Click on Release Version and Select Release Version
-    And Click on Date picker and Select Today
+    #And Click on Date picker and Select Today
     And Click Description
     And Enter Description as "<Description>"
     Then Click Save and Next
@@ -83,5 +86,5 @@ Feature: Release Management Automation Scenarios
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | ReleaseName            | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
-      | Feb12_Release_Version2 | Release Description | New_Enironment_Version | NewWFNAB     | Success           |
+      | ReleaseName               | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
+      | March13_Release_Version27 | Release Description | New_Enironment_Version | NewWFNAB     | Success           |

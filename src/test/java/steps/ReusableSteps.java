@@ -125,9 +125,6 @@ public class ReusableSteps extends BaseUtil {
 	public void enter_Username_and_Password_as_and(String Username, String Password) throws Throwable {
 
 		base.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		WebElement signInText = Abstract.waitUntilConditionSatisfy(base, Login.siginText());
-		signInText.isDisplayed();
-		base.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		WebElement userID = Abstract.waitUntilConditionSatisfy(base, Login.useridLocator());
 		userID.clear();
 		userID.sendKeys(Username);

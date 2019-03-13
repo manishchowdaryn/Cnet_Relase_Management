@@ -17,6 +17,13 @@ public class ReleasePlanningPage {
 		PageFactory.initElements(driver, this);
 
 	}
+	
+	@FindBy(how = How.XPATH, using = "//kendo-dropdownlist/span")
+	public WebElement ClickonReleaseType;
+	
+	@FindBy(how = How.XPATH, using = "//kendo-list/div/ul/li")
+	public WebElement SelectReleaseType;
+	
 
 	@FindBy(how = How.XPATH, using = "//input")
 	public WebElement ClickonReleaseTextbox;
@@ -57,6 +64,17 @@ public class ReleasePlanningPage {
 	@FindBy(how = How.ID, using = "savereleaseAndnextStep")
 	public WebElement ClickSaveNext;
 
+	
+	public WebElement ClickonReleaseType() {
+		return ClickonReleaseType;
+	}
+
+	public WebElement SelectReleaseType() {
+		return SelectReleaseType;
+	}
+	
+	
+	
 	public WebElement ClickonReleaseTextbox() {
 		return ClickonReleaseTextbox;
 	}

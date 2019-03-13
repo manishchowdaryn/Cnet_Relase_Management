@@ -19,7 +19,7 @@ public class EnvironmentPage extends BaseUtil {
 
 	}
 
-	@FindBy(how = How.XPATH, using = "//div[2]/div[2]/div/div/div[2]/button")					 
+	@FindBy(how = How.XPATH, using = "//div/div[1]/div[2]/button/span/span")			 //div[2]/div[2]/div/div/div[2]/button	 
 	public WebElement ClickCreateNewEnvironment;
 
 	public WebElement ClickCreateNewEnvironment() {
@@ -90,7 +90,7 @@ public class EnvironmentPage extends BaseUtil {
 		return EnterTargetEnvironmentName;
 	}
 
-	@FindBy(how = How.XPATH, using = "//div[2]/kendo-dropdownlist/span/span")
+	@FindBy(how = How.XPATH, using = "//div[2]/kendo-dropdownlist/span/span")  //div[2]/kendo-dropdownlist/span/span  //div[2]/kendo-dropdownlist/span/span
 	public WebElement ClickTargetEnvironmentType;
 
 	public WebElement ClickTargetEnvironmentType() {

@@ -94,7 +94,7 @@ public class WorkflowPage extends BaseUtil {
 	}
 	
 	
-	@FindBy(how = How.XPATH, using = "//div[1]/div/div[2]/div/div/ul/div[5]/li")			
+	@FindBy(how = How.XPATH, using = "//div/ul/div[2]/li/a")			//div[1]/div/div[2]/div/div/ul/div[5]/li
 	public WebElement execution;
 
 	public WebElement execution() {
@@ -103,7 +103,7 @@ public class WorkflowPage extends BaseUtil {
 	}
 	
 	
-	@FindBy(how = How.XPATH, using = "//div[2]/div/div/ul/div[5]/li/ul/div[3]/li")			
+	@FindBy(how = How.XPATH, using = "//div[2]/li/ul/div[5]/li/a")			   //div[2]/div/div/ul/div[5]/li/ul/div[3]/li
 	public WebElement anisible;
 
 	public WebElement anisible() {
@@ -112,7 +112,7 @@ public class WorkflowPage extends BaseUtil {
 	}
 	
 	
-	@FindBy(how = How.XPATH, using = "//div[2]/div/div/ul/div[5]/li/ul/div[3]/li/ul/div[1]/li")
+	@FindBy(how = How.XPATH, using = "//div[2]/li/ul/div[5]/li/ul/div/li/a")   //div[2]/div/div/ul/div[5]/li/ul/div[3]/li/ul/div[1]/li
 	public WebElement clickOnPlayBookHost;
 
 	public WebElement clickOnPlayBookHost() {
@@ -185,7 +185,7 @@ public class WorkflowPage extends BaseUtil {
 	
 	
 	
-	@FindBy(how = How.XPATH, using = "//td[4]/button[1]/span")
+	@FindBy(how = How.XPATH, using = "//td[4]/button")                //td[4]/button[1]/span
 	public WebElement clickOnViewWorkflow;
 
 	public WebElement clickOnViewWorkflow() {
@@ -193,7 +193,7 @@ public class WorkflowPage extends BaseUtil {
 
 	}
 	
-	@FindBy(how = How.XPATH, using = "//div[2]/button")
+	@FindBy(how = How.XPATH, using = "//div[1]/div/div[2]/button/span/span")       
 	public WebElement clickOnSaveAsTemplate;
 
 	public WebElement clickOnSaveAsTemplate() {
@@ -218,7 +218,7 @@ public class WorkflowPage extends BaseUtil {
 
 	}
 	
-	@FindBy(how = How.XPATH, using = "//div[2]/div/button")
+	@FindBy(how = How.XPATH, using = "//div[2]/div/button")   
 	public WebElement clickOnSaveTemplate;
 
 	public WebElement clickOnSaveTemplate() {

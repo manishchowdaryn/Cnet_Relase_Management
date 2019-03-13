@@ -1,93 +1,94 @@
-2019-02-11 10:33:49 INFO  Hook:67 - Chrome Browser Launched Successfully
-2019-02-11 10:34:09 INFO  ReusableSteps:78 - Enter Matilda URL in the address bar of the browser
-2019-02-11 10:34:17 INFO  ReusableSteps:136 - Entered Username
-2019-02-11 10:34:17 INFO  ReusableSteps:142 - Entered Password
-2019-02-11 10:34:17 INFO  ReusableSteps:147 - Clicked on Sign In Button
-2019-02-11 10:34:21 INFO  BaseUtil:65 - Click on Create New Release Button
-2019-02-11 10:34:21 INFO  BaseUtil:76 - Click on Release Textbox
-2019-02-11 10:34:22 INFO  BaseUtil:87 - Release Name :Feb11_Release_Version13
-2019-02-11 10:34:23 INFO  BaseUtil:99 - Click on Project Field and Select Project
-2019-02-11 10:34:23 INFO  BaseUtil:112 - Click on Application Field and Select Application
-2019-02-11 10:34:24 INFO  BaseUtil:125 - Click on Release Version Field and Select Release Version
-2019-02-11 10:34:25 INFO  BaseUtil:137 - Click on Date picker and select today
-2019-02-11 10:34:25 INFO  BaseUtil:148 - Click on Description
-2019-02-11 10:34:26 INFO  BaseUtil:158 - Description :Release Description
-2019-02-11 10:34:26 INFO  BaseUtil:168 - Click on Save and Next
-2019-02-11 10:34:27 INFO  BaseUtil:180 - Click on Create New Environment Button
-2019-02-11 10:34:28 INFO  BaseUtil:193 - Click on Environment Name Field
-2019-02-11 10:34:28 INFO  BaseUtil:204 - EnvironmentName :New_Enironment_Version
-2019-02-11 10:34:29 INFO  BaseUtil:216 - Click Environment Type
-2019-02-11 10:34:29 INFO  BaseUtil:221 - Select Environment Type
-2019-02-11 10:34:29 INFO  BaseUtil:232 - Click Save
-2019-02-11 10:34:30 INFO  BaseUtil:244 - Click Create Workflow Icon
-2019-02-11 10:34:31 INFO  BaseUtil:255 - Click on Workflow Name Textbox
-2019-02-11 10:34:31 INFO  BaseUtil:265 - WorkflowName :NewWFNAB
-2019-02-11 10:34:32 INFO  BaseUtil:275 - Click Frequency
-2019-02-11 10:34:32 INFO  BaseUtil:279 - Select Frequency
-2019-02-11 10:34:32 INFO  BaseUtil:491 - Click Save
-2019-02-11 10:34:33 INFO  BaseUtil:289 - Click on Add Stage
-2019-02-11 10:34:33 INFO  BaseUtil:293 - Stage Name :Maneesh
-2019-02-11 10:34:33 INFO  BaseUtil:304 - Click on Tick Mark
-2019-02-11 10:34:34 INFO  BaseUtil:314 - Click On Click To Task
-2019-02-11 10:34:34 INFO  BaseUtil:324 - Mouse Over on Execution
-2019-02-11 10:34:34 INFO  BaseUtil:329 - Mouse Over on Anisible
-2019-02-11 10:34:34 INFO  BaseUtil:334 - Click On Run Play Book Host
-2019-02-11 10:34:35 INFO  BaseUtil:345 - Click On Task Name
-2019-02-11 10:34:35 INFO  BaseUtil:349 - Task Name:AnsibleTask
-2019-02-11 10:34:38 INFO  BaseUtil:360 - Click on Tick Mark to create task
-2019-02-11 10:34:38 INFO  BaseUtil:371 - Click on Vertical Ellipses
-2019-02-11 10:34:38 INFO  BaseUtil:382 - Click on Edit Configurations
-2019-02-11 10:34:39 INFO  BaseUtil:394 - Click on Ansible Path
-2019-02-11 10:34:39 INFO  BaseUtil:399 - PathName :Path
-2019-02-11 10:34:39 INFO  BaseUtil:405 - Click on SFTP
-2019-02-11 10:34:40 INFO  BaseUtil:411 - Click on Host
-2019-02-11 10:34:40 INFO  BaseUtil:416 - HostName :8080
-2019-02-11 10:34:40 INFO  BaseUtil:422 - Click on UserName
-2019-02-11 10:34:40 INFO  BaseUtil:427 - AnsibleUserName :admin
-2019-02-11 10:34:41 INFO  BaseUtil:433 - Click on UserName
-2019-02-11 10:34:41 INFO  BaseUtil:438 - AnsiblePassword :admin
-2019-02-11 10:34:41 INFO  BaseUtil:445 - Click on Become as Yes
-2019-02-11 10:34:42 INFO  BaseUtil:452 - Click on Ansible Configurations Save button
-2019-02-11 10:34:45 INFO  BaseUtil:501 - Click Save Workflow
-2019-02-11 10:34:49 INFO  BaseUtil:511 - Click on View Workflow Icon
-2019-02-11 10:34:49 INFO  BaseUtil:522 - Click on View Workflow Icon
-2019-02-11 10:34:50 INFO  BaseUtil:533 - Click on Template Name Textbox
-2019-02-11 10:34:50 INFO  BaseUtil:543 - Template Name :Template_Feb11
-2019-02-11 10:34:51 INFO  BaseUtil:555 - Click on Save Template button
-2019-02-11 10:34:53 INFO  BaseUtil:618 - Click on Clone Environment
-2019-02-11 10:34:53 INFO  BaseUtil:630 - Click on Template Name Textbox
-2019-02-11 10:34:55 INFO  BaseUtil:641 - Target Environment Name :New_TargetEnvironment_Feb11
-2019-02-11 10:34:55 INFO  BaseUtil:653 - Click on Target Environment Type
-2019-02-11 10:34:55 INFO  BaseUtil:665 - Select Target Environment Type
-2019-02-11 10:34:56 INFO  BaseUtil:677 - Select Target Environment Type
-2019-02-11 10:34:58 INFO  BaseUtil:689 - Click on Start Environment Release Icon
-2019-02-11 10:35:08 INFO  BaseUtil:715 - Click on Release List Tab
-2019-02-11 10:35:08 INFO  BaseUtil:65 - Click on Create New Release Button
-2019-02-11 10:35:09 INFO  BaseUtil:76 - Click on Release Textbox
-2019-02-11 10:35:09 INFO  BaseUtil:87 - Release Name :Feb11_Release_Version14
-2019-02-11 10:35:10 INFO  BaseUtil:99 - Click on Project Field and Select Project
-2019-02-11 10:35:10 INFO  BaseUtil:112 - Click on Application Field and Select Application
-2019-02-11 10:35:11 INFO  BaseUtil:125 - Click on Release Version Field and Select Release Version
-2019-02-11 10:35:12 INFO  BaseUtil:137 - Click on Date picker and select today
-2019-02-11 10:35:13 INFO  BaseUtil:148 - Click on Description
-2019-02-11 10:35:13 INFO  BaseUtil:158 - Description :Release Description
-2019-02-11 10:35:13 INFO  BaseUtil:168 - Click on Save and Next
-2019-02-11 10:35:14 INFO  BaseUtil:180 - Click on Create New Environment Button
-2019-02-11 10:35:15 INFO  BaseUtil:193 - Click on Environment Name Field
-2019-02-11 10:35:15 INFO  BaseUtil:204 - EnvironmentName :New_Enironment_Version
-2019-02-11 10:35:16 INFO  BaseUtil:216 - Click Environment Type
-2019-02-11 10:35:16 INFO  BaseUtil:221 - Select Environment Type
-2019-02-11 10:35:16 INFO  BaseUtil:232 - Click Save
-2019-02-11 10:35:17 INFO  BaseUtil:244 - Click Create Workflow Icon
-2019-02-11 10:35:17 INFO  BaseUtil:255 - Click on Workflow Name Textbox
-2019-02-11 10:35:18 INFO  BaseUtil:265 - WorkflowName :NewWFNAB
-2019-02-11 10:35:18 INFO  BaseUtil:461 - Click Use Template
-2019-02-11 10:35:18 INFO  BaseUtil:465 - Select Template
-2019-02-11 10:35:19 INFO  BaseUtil:476 - Click on Template Version
-2019-02-11 10:35:19 INFO  BaseUtil:481 - Select Template Version
-2019-02-11 10:35:19 INFO  BaseUtil:275 - Click Frequency
-2019-02-11 10:35:19 INFO  BaseUtil:279 - Select Frequency
-2019-02-11 10:35:20 INFO  BaseUtil:491 - Click Save
-2019-02-11 10:35:23 INFO  BaseUtil:501 - Click Save Workflow
-2019-02-11 10:35:29 INFO  BaseUtil:689 - Click on Start Environment Release Icon
-2019-02-11 10:35:35 INFO  Hook:65 - Chrome Browser Closed Successfully
+2019-03-13 14:06:32 INFO  Hook:67 - Chrome Browser Launched Successfully
+2019-03-13 14:06:48 INFO  ReusableSteps:78 - Enter Matilda URL in the address bar of the browser
+2019-03-13 14:06:52 INFO  ReusableSteps:133 - Entered Username
+2019-03-13 14:06:52 INFO  ReusableSteps:139 - Entered Password
+2019-03-13 14:06:52 INFO  ReusableSteps:144 - Clicked on Sign In Button
+2019-03-13 14:06:55 INFO  BaseUtil:64 - Click on Release List Tab
+2019-03-13 14:06:55 INFO  BaseUtil:74 - Click on Create New Release Button
+2019-03-13 14:06:56 INFO  BaseUtil:87 - Clcik and Select ReleaseType
+2019-03-13 14:06:56 INFO  BaseUtil:98 - Click on Release Textbox
+2019-03-13 14:06:57 INFO  BaseUtil:109 - Release Name :March13_Release_Version26
+2019-03-13 14:06:57 INFO  BaseUtil:121 - Click on Project Field and Select Project
+2019-03-13 14:06:58 INFO  BaseUtil:134 - Click on Application Field and Select Application
+2019-03-13 14:06:58 INFO  BaseUtil:147 - Click on Release Version Field and Select Release Version
+2019-03-13 14:06:58 INFO  BaseUtil:170 - Click on Description
+2019-03-13 14:06:59 INFO  BaseUtil:180 - Description :Release Description
+2019-03-13 14:06:59 INFO  BaseUtil:190 - Click on Save and Next
+2019-03-13 14:07:00 INFO  BaseUtil:202 - Click on Create New Environment Button
+2019-03-13 14:07:00 INFO  BaseUtil:215 - Click on Environment Name Field
+2019-03-13 14:07:01 INFO  BaseUtil:226 - EnvironmentName :New_Enironment_Version
+2019-03-13 14:07:01 INFO  BaseUtil:238 - Click Environment Type
+2019-03-13 14:07:01 INFO  BaseUtil:243 - Select Environment Type
+2019-03-13 14:07:01 INFO  BaseUtil:254 - Click Save
+2019-03-13 14:07:02 INFO  BaseUtil:266 - Click Create Workflow Icon
+2019-03-13 14:07:02 INFO  BaseUtil:277 - Click on Workflow Name Textbox
+2019-03-13 14:07:03 INFO  BaseUtil:287 - WorkflowName :NewWFNAB
+2019-03-13 14:07:03 INFO  BaseUtil:297 - Click Frequency
+2019-03-13 14:07:03 INFO  BaseUtil:301 - Select Frequency
+2019-03-13 14:07:03 INFO  BaseUtil:514 - Click Save
+2019-03-13 14:07:03 INFO  BaseUtil:311 - Click on Add Stage
+2019-03-13 14:07:04 INFO  BaseUtil:315 - Stage Name :Maneesh
+2019-03-13 14:07:04 INFO  BaseUtil:326 - Click on Tick Mark
+2019-03-13 14:07:04 INFO  BaseUtil:336 - Click On Click To Task
+2019-03-13 14:07:04 INFO  BaseUtil:346 - Mouse Over on Execution
+2019-03-13 14:07:04 INFO  BaseUtil:351 - Mouse Over on Anisible
+2019-03-13 14:07:05 INFO  BaseUtil:356 - Click On Run Play Book Host
+2019-03-13 14:07:05 INFO  BaseUtil:367 - Click On Task Name
+2019-03-13 14:07:05 INFO  BaseUtil:371 - Task Name:AnsibleTask
+2019-03-13 14:07:05 INFO  BaseUtil:381 - Click on Tick Mark to create task
+2019-03-13 14:07:06 INFO  BaseUtil:392 - Click on Vertical Ellipses
+2019-03-13 14:07:06 INFO  BaseUtil:403 - Click on Edit Configurations
+2019-03-13 14:07:06 INFO  BaseUtil:415 - Click on Ansible Path
+2019-03-13 14:07:07 INFO  BaseUtil:420 - PathName :Path
+2019-03-13 14:07:07 INFO  BaseUtil:426 - Click on SFTP
+2019-03-13 14:07:07 INFO  BaseUtil:432 - Click on Host
+2019-03-13 14:07:07 INFO  BaseUtil:437 - HostName :8080
+2019-03-13 14:07:08 INFO  BaseUtil:444 - Click on UserName
+2019-03-13 14:07:08 INFO  BaseUtil:449 - AnsibleUserName :admin
+2019-03-13 14:07:08 INFO  BaseUtil:456 - Click on UserName
+2019-03-13 14:07:08 INFO  BaseUtil:461 - AnsiblePassword :admin
+2019-03-13 14:07:08 INFO  BaseUtil:468 - Click on Become as Yes
+2019-03-13 14:07:09 INFO  BaseUtil:475 - Click on Ansible Configurations Save button
+2019-03-13 14:07:12 INFO  BaseUtil:524 - Click Save Workflow
+2019-03-13 14:07:19 INFO  BaseUtil:535 - Click on View Workflow Icon
+2019-03-13 14:07:19 INFO  BaseUtil:546 - Click on Save as Template
+2019-03-13 14:07:19 INFO  BaseUtil:557 - Click on Template Name Textbox
+2019-03-13 14:07:19 INFO  BaseUtil:567 - Template Name :Template_March13
+2019-03-13 14:07:20 INFO  BaseUtil:579 - Click on Save Template button
+2019-03-13 14:07:22 INFO  BaseUtil:642 - Click on Clone Environment
+2019-03-13 14:07:22 INFO  BaseUtil:654 - Click on Template Name Textbox
+2019-03-13 14:07:23 INFO  BaseUtil:665 - Target Environment Name :New_TargetEnvironment_March13
+2019-03-13 14:07:24 INFO  BaseUtil:677 - Click on Target Environment Type
+2019-03-13 14:07:24 INFO  BaseUtil:689 - Select Target Environment Type
+2019-03-13 14:07:24 INFO  BaseUtil:701 - Select Target Environment Type
+2019-03-13 14:07:26 INFO  BaseUtil:713 - Click on Start Environment Release Icon
+2019-03-13 14:07:35 INFO  BaseUtil:737 - Click on Release List Tab
+2019-03-13 14:07:35 INFO  BaseUtil:74 - Click on Create New Release Button
+2019-03-13 14:07:36 INFO  BaseUtil:87 - Clcik and Select ReleaseType
+2019-03-13 14:07:36 INFO  BaseUtil:98 - Click on Release Textbox
+2019-03-13 14:07:37 INFO  BaseUtil:109 - Release Name :March13_Release_Version27
+2019-03-13 14:07:37 INFO  BaseUtil:121 - Click on Project Field and Select Project
+2019-03-13 14:07:37 INFO  BaseUtil:134 - Click on Application Field and Select Application
+2019-03-13 14:07:38 INFO  BaseUtil:147 - Click on Release Version Field and Select Release Version
+2019-03-13 14:07:38 INFO  BaseUtil:170 - Click on Description
+2019-03-13 14:07:38 INFO  BaseUtil:180 - Description :Release Description
+2019-03-13 14:07:38 INFO  BaseUtil:190 - Click on Save and Next
+2019-03-13 14:07:39 INFO  BaseUtil:202 - Click on Create New Environment Button
+2019-03-13 14:07:40 INFO  BaseUtil:215 - Click on Environment Name Field
+2019-03-13 14:07:40 INFO  BaseUtil:226 - EnvironmentName :New_Enironment_Version
+2019-03-13 14:07:40 INFO  BaseUtil:238 - Click Environment Type
+2019-03-13 14:07:41 INFO  BaseUtil:243 - Select Environment Type
+2019-03-13 14:07:41 INFO  BaseUtil:254 - Click Save
+2019-03-13 14:07:41 INFO  BaseUtil:266 - Click Create Workflow Icon
+2019-03-13 14:07:42 INFO  BaseUtil:277 - Click on Workflow Name Textbox
+2019-03-13 14:07:42 INFO  BaseUtil:287 - WorkflowName :NewWFNAB
+2019-03-13 14:07:42 INFO  BaseUtil:484 - Click Use Template
+2019-03-13 14:07:42 INFO  BaseUtil:488 - Select Template
+2019-03-13 14:07:43 INFO  BaseUtil:499 - Click on Template Version
+2019-03-13 14:07:43 INFO  BaseUtil:504 - Select Template Version
+2019-03-13 14:07:43 INFO  BaseUtil:297 - Click Frequency
+2019-03-13 14:07:43 INFO  BaseUtil:301 - Select Frequency
+2019-03-13 14:07:43 INFO  BaseUtil:514 - Click Save
+2019-03-13 14:07:46 INFO  BaseUtil:524 - Click Save Workflow
+2019-03-13 14:07:52 INFO  BaseUtil:713 - Click on Start Environment Release Icon
+2019-03-13 14:07:59 INFO  Hook:65 - Chrome Browser Closed Successfully

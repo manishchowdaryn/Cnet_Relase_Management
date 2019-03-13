@@ -1,17 +1,19 @@
 Feature: Create New Release
 
   @ReleaseManagement
-  Scenario Outline: Release_Management
+  Scenario Outline: Release_Management in Chrome
     Given Launch Browser and access the Matilda URL
     Then Verify whether Login page is correctly opened or not
     And Enter Username and Password as "<Username>" and "<Password>"
+    Then Click on Release List Tab
     Then Click on Create New Release Button
+    Then Click on Release Type and Select Release Type
     And Click on Release Name Text Box
     And Enter Release Name as "<ReleaseName>"
     And Click on Project Field and Select Project
     And Click on Application and Select Application
     And Click on Release Version and Select Release Version
-    And Click on Date picker and Select Today
+    #And Click on Date picker and Select Today
     And Click Description
     And Enter Description as "<Description>"
     Then Click Save and Next
@@ -50,5 +52,5 @@ Feature: Create New Release
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | Username               | Password | ReleaseName              | Description         | EnvironmentName        | WorkflowName | stageName | TaskName    | PathName | Host | AnsibleUserName | AnsiblePassword | TemplateName   | TargetEnvironmentName       | ApplicationStatus |
-      | admin@matildacloud.com | matilda  | Jan_23_Release_version16 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | AnsibleTask | Path     | 8080 | admin           | admin           | Template_Jan23 | New_TargetEnvironment_Jan23 | InProgress        |
+      | Username                | Password          | ReleaseName               | Description         | EnvironmentName        | WorkflowName | stageName | TaskName    | PathName | Host | AnsibleUserName | AnsiblePassword | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
+      | ananda@matildacloud.com | Ananda123@Matilda | March13_Release_Version23 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | AnsibleTask | Path     | 8080 | admin           | admin           | Template_March13 | New_TargetEnvironment_March13 | InProgress        |

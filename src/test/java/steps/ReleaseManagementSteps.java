@@ -2,7 +2,6 @@ package steps;
 
 import java.awt.AWTException;
 
-
 import org.openqa.selenium.JavascriptExecutor;
 
 import java.io.IOException;
@@ -55,6 +54,16 @@ public class ReleaseManagementSteps extends BaseUtil {
 		PluginConfigurationsPage = new PluginConfigurationsPage(base.driver);
 	}
 
+	@Then("^Click on Release List Tab$")
+	public void ClickonReleaseListTab() throws Throwable {
+		base.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		WebElement ClickReleaseList = Abstract.waitUntilConditionSatisfy(base,
+				ReleaselistSearchPage.ClickonReleaselistTab());
+		ClickReleaseList.isEnabled();
+		ClickReleaseList.click();
+		logger.info("Click on Release List Tab");
+	}
+
 	@Then("^Click on Create New Release Button$")
 	public void ClickCreateNewRelease() throws Throwable {
 		base.driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
@@ -63,6 +72,19 @@ public class ReleaseManagementSteps extends BaseUtil {
 		ClickCreateNewRelease.isEnabled();
 		ClickCreateNewRelease.click();
 		logger.info("Click on Create New Release Button");
+	}
+
+	@Then("^Click on Release Type and Select Release Type$")
+	public void ClickonReleaseType() throws Throwable {
+		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		WebElement ClickReleaseType = Abstract.waitUntilConditionSatisfy(base,
+				ReleasePlanningPage.ClickonReleaseType());
+
+		ClickReleaseType.click();
+		WebElement SelectReleaseType = Abstract.waitUntilConditionSatisfy(base,
+				ReleasePlanningPage.SelectReleaseType());
+		SelectReleaseType.click();
+		logger.info("Clcik and Select ReleaseType");
 	}
 
 	@And("^Click on Release Name Text Box$")
@@ -83,7 +105,7 @@ public class ReleaseManagementSteps extends BaseUtil {
 		WebElement EnterReleaseName = Abstract.waitUntilConditionSatisfy(base, ReleasePlanningPage.EnterReleaseName());
 		EnterReleaseName.click();
 		EnterReleaseName.sendKeys(ReleaseName);
-	
+
 		logger.info("Release Name :" + ReleaseName);
 
 	}
@@ -125,17 +147,17 @@ public class ReleaseManagementSteps extends BaseUtil {
 		logger.info("Click on Release Version Field and Select Release Version");
 	}
 
-	@And("^Click on Date picker and Select Today$")
-
-	public void ClickonDatePicker() throws Throwable {
-		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement ClickonDatePicker = Abstract.waitUntilConditionSatisfy(base,
-				ReleasePlanningPage.ClickonDatePicker());
-		ClickonDatePicker.click();
-		WebElement SelectToday = Abstract.waitUntilConditionSatisfy(base, ReleasePlanningPage.SelectToday());
-		SelectToday.click();
-		logger.info("Click on Date picker and select today");
-	}
+//	@And("^Click on Date picker and Select Today$")
+//
+//	public void ClickonDatePicker() throws Throwable {
+//		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+//		WebElement ClickonDatePicker = Abstract.waitUntilConditionSatisfy(base,
+//				ReleasePlanningPage.ClickonDatePicker());
+//		ClickonDatePicker.click();
+//		WebElement SelectToday = Abstract.waitUntilConditionSatisfy(base, ReleasePlanningPage.SelectToday());
+//		SelectToday.click();
+//		logger.info("Click on Date picker and select today");
+//	}
 
 	@And("^Click Description$")
 
@@ -164,7 +186,7 @@ public class ReleaseManagementSteps extends BaseUtil {
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		WebElement ClickSaveNext = Abstract.waitUntilConditionSatisfy(base, ReleasePlanningPage.ClickSaveNext());
 		ClickSaveNext.click();
-		
+
 		logger.info("Click on Save and Next");
 	}
 
@@ -176,7 +198,7 @@ public class ReleaseManagementSteps extends BaseUtil {
 		WebElement ClickCreateNewEnvironment = Abstract.waitUntilConditionSatisfy(base,
 				EnvironmentPage.ClickCreateNewEnvironment());
 		ClickCreateNewEnvironment.click();
-	
+
 		logger.info("Click on Create New Environment Button");
 
 	}
@@ -200,7 +222,7 @@ public class ReleaseManagementSteps extends BaseUtil {
 		WebElement EnterEnvironmentName = Abstract.waitUntilConditionSatisfy(base,
 				EnvironmentPage.EnterEnvironmentName());
 		EnterEnvironmentName.sendKeys(EnvironmentName);
-	
+
 		logger.info("EnvironmentName :" + EnvironmentName);
 	}
 
@@ -353,7 +375,6 @@ public class ReleaseManagementSteps extends BaseUtil {
 	@Then("^Click on Tick Mark to create task$")
 	public void clickOntickmarktask() throws Throwable {
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		Thread.sleep(2000);
 
 		WebElement clickOntickmarktask = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.clickOntickmarktask());
 		clickOntickmarktask.click();
@@ -416,7 +437,8 @@ public class ReleaseManagementSteps extends BaseUtil {
 		logger.info("HostName :" + Host);
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement ClickonUserName = Abstract.waitUntilConditionSatisfy(base, PluginConfigurationsPage.ClickonUserName());
+		WebElement ClickonUserName = Abstract.waitUntilConditionSatisfy(base,
+				PluginConfigurationsPage.ClickonUserName());
 		ClickonUserName.isEnabled();
 		ClickonUserName.click();
 		logger.info("Click on UserName");
@@ -427,7 +449,8 @@ public class ReleaseManagementSteps extends BaseUtil {
 		logger.info("AnsibleUserName :" + AnsibleUserName);
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement ClickonPassword = Abstract.waitUntilConditionSatisfy(base, PluginConfigurationsPage.ClickonPassword());
+		WebElement ClickonPassword = Abstract.waitUntilConditionSatisfy(base,
+				PluginConfigurationsPage.ClickonPassword());
 		ClickonPassword.isEnabled();
 		ClickonPassword.click();
 		logger.info("Click on UserName");
@@ -504,29 +527,30 @@ public class ReleaseManagementSteps extends BaseUtil {
 
 	@Then("^Click on View Workflow Icon$")
 	public void clickOnViewWorkflow() throws Throwable {
-		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		base.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
 		WebElement clickOnViewWorkflow = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.clickOnViewWorkflow());
 		clickOnViewWorkflow.click();
+		Thread.sleep(3000);
 		logger.info("Click on View Workflow Icon");
 
 	}
 
 	@Then("^Click on Save as Template$")
 	public void clickOnSaveAsTemplate() throws Throwable {
-		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		base.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
 		WebElement clickOnSaveAsTemplate = Abstract.waitUntilConditionSatisfy(base,
 				WorkflowPage.clickOnSaveAsTemplate());
 		clickOnSaveAsTemplate.click();
-		logger.info("Click on View Workflow Icon");
+		logger.info("Click on Save as Template");
 
 	}
 
 	@And("^Click on Template Name Text Box$")
 	public void clickOnTemplateName() throws Throwable {
 
-		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		base.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		WebElement clickOnTemplateName = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.clickOnTemplateName());
 		clickOnTemplateName.isEnabled();
 		clickOnTemplateName.click();
@@ -536,7 +560,7 @@ public class ReleaseManagementSteps extends BaseUtil {
 
 	@And("^Enter Template Name as \"([^\"]*)\"$")
 	public void EnterTemplateName(String TemplateName) throws Throwable {
-		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		base.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		WebElement EnterTemplateName = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.EnterTemplateName());
 		EnterTemplateName.click();
 		EnterTemplateName.sendKeys(TemplateName);
@@ -546,7 +570,7 @@ public class ReleaseManagementSteps extends BaseUtil {
 
 	@Then("^Click on Save Template button$")
 	public void clickOnSaveTemplate() throws Throwable {
-		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		base.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
 		WebElement clickOnSaveTemplate = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.clickOnSaveTemplate());
 		clickOnSaveTemplate.click();
@@ -558,7 +582,7 @@ public class ReleaseManagementSteps extends BaseUtil {
 
 	@Then("^Click on Release list Tab$")
 	public void ClickonReleaselistTab() throws Throwable {
-		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		base.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
 		WebElement ClickonReleaselistTab = Abstract.waitUntilConditionSatisfy(base,
 				ReleaselistSearchPage.ClickonReleaselistTab());
@@ -697,23 +721,20 @@ public class ReleaseManagementSteps extends BaseUtil {
 		WebElement ApplicationStatusLocation = Abstract.waitUntilConditionSatisfy(base, EnvironmentPage.VerifyStatus());
 		String ApplicationStatusText = ApplicationStatusLocation.getText();
 		Abstract.validation(ApplicationStatusText, ApplicationStatus);
-		//Assert.assertEquals(ApplicationStatusText, ApplicationStatus);
+		// Assert.assertEquals(ApplicationStatusText, ApplicationStatus);
 		logger.info("Verify the statsu as :" + ApplicationStatus);
 
 	}
-	
-	
-	@Then("^Click on Release List Tab$")
+
+	@Then("^Click on Release List Tab for Second Execution$")
 	public void clickOnReleaseListTab() throws Throwable {
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement releaseList = Abstract.waitUntilConditionSatisfy(base,
-				DashboardPage.releaseList());
-	Thread.sleep(3000);
+		WebElement releaseList = Abstract.waitUntilConditionSatisfy(base, DashboardPage.releaseList());
+		Thread.sleep(3000);
 		releaseList.isEnabled();
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		releaseList.click();
 		logger.info("Click on Release List Tab");
 	}
-
 
 }

@@ -18,23 +18,18 @@ public class Login extends BaseUtil{
     
        }
        
-       @FindBy(how = How.XPATH, using = "//*[@id='m_login']/div[1]/div/div[1]/div/div[2]/div/h3")     //input
-	    public WebElement siginText;
-       
-	    @FindBy(how = How.XPATH, using = "//html/body/div[2]/div/div[1]/div/div[1]/div/div[2]/form/div[1]/input")     //input
+ 
+	    @FindBy(how = How.XPATH, using = "//div[1]/div/form/div[1]/input")     //input
 	    public WebElement useridLocator;
 	
-	    @FindBy(how = How.XPATH, using = "//div[2]/input")
+	    @FindBy(how = How.XPATH, using = "//div[3]/input")
 	    public WebElement passwordLocator;
 	    
 	    @FindBy(how = How.ID, using = "m_login_signin_submit")
 	    public WebElement loginButton;
   
 
-	    
-	    public WebElement siginText() {
-			return siginText;
-		}
+
 	  
 	    public WebElement useridLocator() {
 			return useridLocator;

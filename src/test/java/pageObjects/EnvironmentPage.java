@@ -119,7 +119,7 @@ public class EnvironmentPage extends BaseUtil {
 	}
 	
 	
-	@FindBy(how = How.XPATH, using = "//tr/td[3]/p/span")
+	@FindBy(how = How.XPATH, using = "//td[3]/p/span")
 	public WebElement VerifyStatus;
 
 	public WebElement VerifyStatus() {

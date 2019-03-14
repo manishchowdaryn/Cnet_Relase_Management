@@ -35,4 +35,4 @@ Feature: Create Release using Existing Template
 
     Examples: 
       | Username                | Password          | ReleaseName                | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
-      | ananda@matildacloud.com | Ananda123@Matilda | March_13_Release_version25 | Release Description | New_Enironment_Version | NewWFNAB     | InProgress        |
+      | ananda@matildacloud.com | Ananda123@Matilda | March_14_Release_version | Release Description | New_Enironment_Version | NewWFNAB     | Success           |

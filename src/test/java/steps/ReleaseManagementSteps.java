@@ -1,6 +1,7 @@
 package steps;
 
-import java.awt.AWTException;
+import java.awt.AWTException
+;
 
 import org.openqa.selenium.JavascriptExecutor;
 
@@ -26,8 +27,10 @@ import pageObjects.ReleasePlanningPage;
 import pageObjects.WorkflowPage;
 import pageObjects.EnvironmentPage;
 import pageObjects.ReleaselistSearchPage;
-import pageObjects.PluginConfigurationsPage;
+import pageObjects.AnsiblePluginConfigurationsPage;
+import pageObjects.BambooPluginConfigurationsPage;
 import reusableFunction.Abstract;
+import PageObjects_Infra.EnvironmentsTab;
 
 public class ReleaseManagementSteps extends BaseUtil {
 
@@ -38,7 +41,9 @@ public class ReleaseManagementSteps extends BaseUtil {
 	public EnvironmentPage EnvironmentPage;
 	public WorkflowPage WorkflowPage;
 	public ReleaselistSearchPage ReleaselistSearchPage;
-	public PluginConfigurationsPage PluginConfigurationsPage;
+	public AnsiblePluginConfigurationsPage AnsiblePluginConfigurationsPage;
+	public BambooPluginConfigurationsPage BambooPluginConfigurationsPage;
+	public EnvironmentsTab EnvironmentsTab;
 	Properties prop = new Properties();
 	InputStream input = null;
 
@@ -51,7 +56,9 @@ public class ReleaseManagementSteps extends BaseUtil {
 		EnvironmentPage = new EnvironmentPage(base.driver);
 		WorkflowPage = new WorkflowPage(base.driver);
 		ReleaselistSearchPage = new ReleaselistSearchPage(base.driver);
-		PluginConfigurationsPage = new PluginConfigurationsPage(base.driver);
+		AnsiblePluginConfigurationsPage = new AnsiblePluginConfigurationsPage(base.driver);
+		BambooPluginConfigurationsPage = new BambooPluginConfigurationsPage(base.driver);
+		EnvironmentsTab = new EnvironmentsTab(base.driver);
 	}
 
 	@Then("^Click on Release List Tab$")
@@ -186,6 +193,7 @@ public class ReleaseManagementSteps extends BaseUtil {
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		WebElement ClickSaveNext = Abstract.waitUntilConditionSatisfy(base, ReleasePlanningPage.ClickSaveNext());
 		ClickSaveNext.click();
+		Thread.sleep(2000);
 
 		logger.info("Click on Save and Next");
 	}
@@ -337,23 +345,23 @@ public class ReleaseManagementSteps extends BaseUtil {
 
 	}
 
-	@And("^Click on execution and ansible and click on run play book host$")
+	@And("^Click on tracking and bamboo and click on Queue Build$")
 	public void clickOnRunPlayBookHost() throws Throwable {
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement execution = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.execution());
-		Abstract.moveToElement(base, execution);
-		logger.info("Mouse Over on Execution");
+		WebElement tracking = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.tracking());
+		Abstract.moveToElement(base, tracking);
+		logger.info("Mouse Over on tracking");
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement anisible = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.anisible());
-		Abstract.moveToElement(base, anisible);
-		logger.info("Mouse Over on Anisible");
+		WebElement bamboo = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.bamboo());
+		Abstract.moveToElement(base, bamboo);
+		logger.info("Mouse Over on bamboo");
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement clickOnPlayBookHost = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.clickOnPlayBookHost());
-		Abstract.moveToElementAndClick(base, clickOnPlayBookHost);
-		logger.info("Click On Run Play Book Host");
+		WebElement clickOnQueueBuild = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.clickOnQueueBuild());
+		Abstract.moveToElementAndClick(base, clickOnQueueBuild);
+		logger.info("Click On Queue Build");
 
 	}
 
@@ -403,81 +411,179 @@ public class ReleaseManagementSteps extends BaseUtil {
 		logger.info("Click on Edit Configurations");
 
 	}
-
+/*Ansible Plugin List
+ 
 	@And("^Enter PathName and Host and AnsibleUserName and AnsiblePassword as \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void enter_PathName_and_Host_and_AnsibleUserName_and_AnsiblePassword_as_and_and_and(String PathName,
 			String Host, String AnsibleUserName, String AnsiblePassword) throws Throwable {
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement ClickonPath = Abstract.waitUntilConditionSatisfy(base, PluginConfigurationsPage.ClickonPath());
+		WebElement ClickonPath = Abstract.waitUntilConditionSatisfy(base, AnsiblePluginConfigurationsPage.ClickonPath());
 		ClickonPath.isEnabled();
 		ClickonPath.click();
 		logger.info("Click on Ansible Path");
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement EnterPathName = Abstract.waitUntilConditionSatisfy(base, PluginConfigurationsPage.EnterPathName());
+		WebElement EnterPathName = Abstract.waitUntilConditionSatisfy(base, AnsiblePluginConfigurationsPage.EnterPathName());
 		EnterPathName.sendKeys(PathName);
 		logger.info("PathName :" + PathName);
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement ClickonSFTP = Abstract.waitUntilConditionSatisfy(base, PluginConfigurationsPage.ClickonSFTP());
+		WebElement ClickonSFTP = Abstract.waitUntilConditionSatisfy(base, AnsiblePluginConfigurationsPage.ClickonSFTP());
 		ClickonSFTP.isEnabled();
 		ClickonSFTP.click();
 		logger.info("Click on SFTP");
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement ClickonHost = Abstract.waitUntilConditionSatisfy(base, PluginConfigurationsPage.ClickonHost());
+		WebElement ClickonHost = Abstract.waitUntilConditionSatisfy(base, AnsiblePluginConfigurationsPage.ClickonHost());
 		ClickonHost.isEnabled();
 		ClickonHost.click();
 		logger.info("Click on Host");
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement EnterHost = Abstract.waitUntilConditionSatisfy(base, PluginConfigurationsPage.EnterHost());
+		WebElement EnterHost = Abstract.waitUntilConditionSatisfy(base, AnsiblePluginConfigurationsPage.EnterHost());
 		EnterHost.sendKeys(Host);
 		logger.info("HostName :" + Host);
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		WebElement ClickonUserName = Abstract.waitUntilConditionSatisfy(base,
-				PluginConfigurationsPage.ClickonUserName());
+				AnsiblePluginConfigurationsPage.ClickonUserName());
 		ClickonUserName.isEnabled();
 		ClickonUserName.click();
 		logger.info("Click on UserName");
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement EnterUserName = Abstract.waitUntilConditionSatisfy(base, PluginConfigurationsPage.EnterUserName());
+		WebElement EnterUserName = Abstract.waitUntilConditionSatisfy(base, AnsiblePluginConfigurationsPage.EnterUserName());
 		EnterUserName.sendKeys(AnsibleUserName);
 		logger.info("AnsibleUserName :" + AnsibleUserName);
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		WebElement ClickonPassword = Abstract.waitUntilConditionSatisfy(base,
-				PluginConfigurationsPage.ClickonPassword());
+				AnsiblePluginConfigurationsPage.ClickonPassword());
 		ClickonPassword.isEnabled();
 		ClickonPassword.click();
 		logger.info("Click on UserName");
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement EnterPassword = Abstract.waitUntilConditionSatisfy(base, PluginConfigurationsPage.EnterPassword());
+		WebElement EnterPassword = Abstract.waitUntilConditionSatisfy(base, AnsiblePluginConfigurationsPage.EnterPassword());
 		EnterPassword.sendKeys(AnsiblePassword);
 		logger.info("AnsiblePassword :" + AnsiblePassword);
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		WebElement ClickonBecomeYes = Abstract.waitUntilConditionSatisfy(base,
-				PluginConfigurationsPage.ClickonBecomeYes());
+				AnsiblePluginConfigurationsPage.ClickonBecomeYes());
 		ClickonBecomeYes.isEnabled();
 		ClickonBecomeYes.click();
 		logger.info("Click on Become as Yes");
 
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
 		WebElement ClickonPluginConfigSave = Abstract.waitUntilConditionSatisfy(base,
-				PluginConfigurationsPage.ClickonPluginConfigSave());
+				AnsiblePluginConfigurationsPage.ClickonPluginConfigSave());
 		ClickonPluginConfigSave.isEnabled();
 		ClickonPluginConfigSave.click();
 		logger.info("Click on Ansible Configurations Save button");
 	}
+*/
+
+	@And("^Enter Bamboo Host and BambooUserName and BambooPassword and BambooPort and BambooPlanKey and BambooProjectKey and BambooBuildKey as \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void enter_BambooHost_and_BambooUserName_and_BambooPassword_and_BambooPort_and_BambooPlanKey_and_BambooProjectkey_and_BambooBuildKey_as(String BambooHost,
+			String BambooUserName, String BambooPassword, String BambooPort, String BambooPlanKey, String BambooProjectkey, String BambooBuildKey) throws Throwable {
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement ClickonBambooHost = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.ClickonBamboohost());
+		ClickonBambooHost.isEnabled();
+		ClickonBambooHost.click();
+		logger.info("Click on BambooHost");
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement EnterBamboohost = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.EnterBamboohost());
+		EnterBamboohost.sendKeys(BambooHost);
+		Thread.sleep(2000);
+		logger.info("BambooHost :" + BambooHost);
+		
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement ClickonBambooUsername = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.ClickonBambooUsername());
+		ClickonBambooUsername.isEnabled();
+		ClickonBambooUsername.click();
+		logger.info("Click on Bamboo UserName");
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement EnterBambooUsername = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.EnterBambooUsername());
+		EnterBambooUsername.sendKeys(BambooUserName);
+		logger.info("BambooUsername :" + BambooUserName);
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement ClickonBambooPassword = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.ClickonBambooPassword());
+		ClickonBambooPassword.isEnabled();
+		ClickonBambooPassword.click();
+		logger.info("Click on Bamboo Password");
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement EnterBambooPassword = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.EnterBambooPassword());
+		EnterBambooPassword.sendKeys(BambooPassword);
+		logger.info("BambooPassword :" + BambooPassword);
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement ClickonBambooPort = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.ClickonBambooPort());
+		ClickonBambooPort.isEnabled();
+		ClickonBambooPort.click();
+		logger.info("Click on Bamboo Port");
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement EnterBambooPort = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.EnterBambooPort());
+		EnterBambooPort.sendKeys(BambooPort);
+		logger.info("BambooPort :" + BambooPort);
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement ClickonPlanKey = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.ClickonPlanKey());
+		ClickonPlanKey.isEnabled();
+		ClickonPlanKey.click();
+		logger.info("Click on Bamboo Plan Key");
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement EnterPlanKey = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.EnterPlanKey());
+		EnterPlanKey.sendKeys(BambooPlanKey);
+		logger.info("BambooPlanKey :" + BambooPlanKey);
+	
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement ClickonProjectKey = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.ClickonProjectKey());
+		ClickonProjectKey.isEnabled();
+		ClickonProjectKey.click();
+		logger.info("Click on Bamboo Project Key");
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement EnterProjectKey = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.EnterProjectKey());
+		EnterProjectKey.sendKeys(BambooProjectkey);
+		logger.info("BambooProjectkey :" + BambooProjectkey);
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement ClickonBuildKey = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.ClickonBuildKey());
+		ClickonBuildKey.isEnabled();
+		ClickonBuildKey.click();
+		logger.info("Click on Bamboo Build Key");
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement EnterBuildKey = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.EnterBuildKey());
+		EnterBuildKey.sendKeys(BambooBuildKey);
+		logger.info("BambooBuildKey :" + BambooBuildKey);
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement ClickonBambooPluginSave = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.ClickonBambooPluginSave());
+		ClickonBambooPluginSave.isEnabled();
+		ClickonBambooPluginSave.click();
+	
+		
+		logger.info("Click on Bamboo Build Key");
+		
+	}
+			
 
 	@And("^Click on Use Template and Select Template$")
 	public void clickOnUseTemplate() throws Throwable {
 		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		JavascriptExecutor js = (JavascriptExecutor) base.driver;
+		 js.executeScript("window.scrollBy(1000,0)");
 
 		WebElement clickOnUseTemplate = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.clickOnUseTemplate());
 		clickOnUseTemplate.click();
@@ -574,22 +680,12 @@ public class ReleaseManagementSteps extends BaseUtil {
 
 		WebElement clickOnSaveTemplate = Abstract.waitUntilConditionSatisfy(base, WorkflowPage.clickOnSaveTemplate());
 		clickOnSaveTemplate.click();
-
 		base.driver.navigate().back();
+		Thread.sleep(1000);
 		logger.info("Click on Save Template button");
 
 	}
 
-	@Then("^Click on Release list Tab$")
-	public void ClickonReleaselistTab() throws Throwable {
-		base.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-
-		WebElement ClickonReleaselistTab = Abstract.waitUntilConditionSatisfy(base,
-				ReleaselistSearchPage.ClickonReleaselistTab());
-		ClickonReleaselistTab.click();
-		logger.info("Click on Release list Tab");
-
-	}
 
 	@Then("^Click on Release list Search Filter$")
 	public void ClickonSearchRelease() throws Throwable {
@@ -713,7 +809,7 @@ public class ReleaseManagementSteps extends BaseUtil {
 		logger.info("Click on Start Environment Release Icon");
 
 	}
-
+	
 	@Then("^Verify the Status as \"([^\"]*)\"$")
 	public void VerifyStatus(String ApplicationStatus) throws Throwable {
 		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
@@ -726,15 +822,16 @@ public class ReleaseManagementSteps extends BaseUtil {
 
 	}
 
-	@Then("^Click on Release List Tab for Second Execution$")
-	public void clickOnReleaseListTab() throws Throwable {
-		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		WebElement releaseList = Abstract.waitUntilConditionSatisfy(base, DashboardPage.releaseList());
-		Thread.sleep(3000);
-		releaseList.isEnabled();
-		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		releaseList.click();
-		logger.info("Click on Release List Tab");
-	}
 
+
+
+	@Then("^Click on Environments Tab$")
+	public void clickEnvironmentTab() throws Throwable {
+		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		WebElement EnvironmentTab = Abstract.waitUntilConditionSatisfy(base, EnvironmentsTab.ClickEnvironmentsTab());
+		EnvironmentTab.isEnabled();
+		base.driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
+		EnvironmentTab.click();
+		logger.info("Click on Environments Tab");
+	}
 }

@@ -31,7 +31,7 @@ import pageObjects.ReleasePlanningPage;
 import pageObjects.EnvironmentPage;
 import pageObjects.WorkflowPage;
 import pageObjects.ReleaselistSearchPage;
-import pageObjects.PluginConfigurationsPage;
+import pageObjects.AnsiblePluginConfigurationsPage;
 
 import reusableFunction.Abstract;
 import runner.RunCukes;
@@ -47,7 +47,7 @@ public class ReusableSteps extends BaseUtil {
 	public EnvironmentPage EnvironmentPage;
 	public WorkflowPage WorkflowPage;
 	public ReleaselistSearchPage ReleaselistSearchPage;
-	public PluginConfigurationsPage PluginConfigurationsPage;
+	public AnsiblePluginConfigurationsPage PluginConfigurationsPage;
 	public Abstract Abstract;
 	static String folderName;
 
@@ -64,7 +64,7 @@ public class ReusableSteps extends BaseUtil {
 		WorkflowPage = new WorkflowPage(base.driver);
 		Abstract = new Abstract(base.driver);
 		ReleaselistSearchPage = new ReleaselistSearchPage(base.driver);
-		PluginConfigurationsPage = new PluginConfigurationsPage(base.driver);
+		PluginConfigurationsPage = new AnsiblePluginConfigurationsPage(base.driver);
 
 	}
 

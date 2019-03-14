@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -8,11 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import baseClass.BaseUtil;
 
-public class PluginConfigurationsPage extends BaseUtil {
+public class AnsiblePluginConfigurationsPage extends BaseUtil {
 
 	public BaseUtil base;
 
-	public PluginConfigurationsPage(WebDriver driver) {
+	public AnsiblePluginConfigurationsPage(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
 
@@ -105,5 +106,5 @@ public class PluginConfigurationsPage extends BaseUtil {
 		return ClickonPluginConfigSave;
 
 	}
-	
+
 }

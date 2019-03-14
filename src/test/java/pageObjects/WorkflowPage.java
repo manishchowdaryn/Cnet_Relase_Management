@@ -94,29 +94,29 @@ public class WorkflowPage extends BaseUtil {
 	}
 	
 	
-	@FindBy(how = How.XPATH, using = "//div/ul/div[2]/li/a")			//div[1]/div/div[2]/div/div/ul/div[5]/li
-	public WebElement execution;
+	@FindBy(how = How.XPATH, using = "//div/li/a/span")			//div[1]/div/div[2]/div/div/ul/div[5]/li
+	public WebElement tracking;
 
-	public WebElement execution() {
-		return execution;
-
-	}
-	
-	
-	@FindBy(how = How.XPATH, using = "//div[2]/li/ul/div[5]/li/a")			   //div[2]/div/div/ul/div[5]/li/ul/div[3]/li
-	public WebElement anisible;
-
-	public WebElement anisible() {
-		return anisible;
+	public WebElement tracking() {
+		return tracking;
 
 	}
 	
 	
-	@FindBy(how = How.XPATH, using = "//div[2]/li/ul/div[5]/li/ul/div/li/a")   //div[2]/div/div/ul/div[5]/li/ul/div[3]/li/ul/div[1]/li
-	public WebElement clickOnPlayBookHost;
+	@FindBy(how = How.XPATH, using = "//div[4]/li/a")			   //div[2]/div/div/ul/div[5]/li/ul/div[3]/li
+	public WebElement bamboo;
 
-	public WebElement clickOnPlayBookHost() {
-		return clickOnPlayBookHost;
+	public WebElement bamboo() {
+		return bamboo;
+
+	}
+	
+	
+	@FindBy(how = How.XPATH, using = "//div[16]/li/a")   //div[2]/div/div/ul/div[5]/li/ul/div[3]/li/ul/div[1]/li
+	public WebElement clickOnQueueBuild;
+
+	public WebElement clickOnQueueBuild() {
+		return clickOnQueueBuild;
 
 	}
 	
@@ -149,10 +149,10 @@ public class WorkflowPage extends BaseUtil {
 	}
 	
 	
-	@FindBy(how = How.XPATH, using = "//kendo-list/div/ul/li[6]")
+	@FindBy(how = How.XPATH, using = "//li[9]")	//kendo-list/div/ul/li[6]  //4e90818f-7096-4f3f-8254-d440828d418b-bamboo_test_template
 	public WebElement SelectUseTemplate;
 
-	public WebElement SelectUseTemplate() {
+	public WebElement SelectUseTemplate() {				
 		return SelectUseTemplate;
 
 	}

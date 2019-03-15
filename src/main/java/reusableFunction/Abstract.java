@@ -132,6 +132,14 @@ public class Abstract extends BaseUtil {
 		}
 		
 	}
+	public void scrollup(BaseUtil base) throws InterruptedException {
+
+		JavascriptExecutor js = (JavascriptExecutor) base.driver;
+        js.executeScript("javascript:window.scrollBy(250,0)");
+        js.executeScript("window.scrollTo(0, Math.max(document.documentElement.scrollHeight, document.body.scrollHeight, document.documentElement.clientHeight));");
+ 
+        
+	}
 
 	public void scrolldown(BaseUtil base) throws InterruptedException {
 

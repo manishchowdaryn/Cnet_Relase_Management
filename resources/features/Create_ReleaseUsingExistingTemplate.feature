@@ -34,5 +34,5 @@ Feature: Create Release using Existing Template
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | Username                | Password          | ReleaseName                | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
-      | ananda@matildacloud.com | Ananda123@Matilda | March_14_Release_version | Release Description | New_Enironment_Version | NewWFNAB     | Success           |
+      | Username                | Password          | ReleaseName                  | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
+      | ananda@matildacloud.com | Ananda123@Matilda | March_15_ExistingTemplate_v1 | Release Description | New_Enironment_Version | NewWFNAB     | Success           |

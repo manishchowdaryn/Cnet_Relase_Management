@@ -12,16 +12,18 @@ Feature: Release Management Automation Scenarios
     And Enter Release Name as "<ReleaseName>"
     And Click on Project Field and Select Project
     And Click on Application and Select Application
-    And Click on Release Version and Select Release Version
+    And Click on Release Plan and Select Release Plan
     #And Click on Date picker and Select Today
     And Click Description
     And Enter Description as "<Description>"
     Then Click Save and Next
+    Then Verify Release is Created or not
     Then Click on Create New Environment Button
     And Click on Environment Name Field
     And Enter Environment as "<EnvironmentName>"
     And Click on Environment Type and Select Environment Type
     Then Click on Save Button
+    Then Verify Environment is Created or not
     Then Click on Create Workflow Icon
     And Click on Workflow Name Text Box
     And Enter Workflow Name as "<WorkflowName>"
@@ -53,8 +55,8 @@ Feature: Release Management Automation Scenarios
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | Username                | Password          | ReleaseName           | Description         | EnvironmentName        | WorkflowName | stageName | TaskName   | PathName | Host | AnsibleUserName | AnsiblePassword | BambooHost            | BambooUserName | BambooPassword | BambooPort | BambooPlanKey | BambooProjectkey | BambooBuildKey | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
-      | ananda@matildacloud.com | Ananda123@Matilda | March14_Release_ETE_4 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | BambooTask | Path     | 8080 | admin           | admin           | http://54.149.196.230 | matilda        | matilda        |       8050 | MAT-TEST      | MAT              | TEST           | Template_March14 | New_TargetEnvironment_March14 | InProgress        |
+      | Username                | Password          | ReleaseName              | Description         | EnvironmentName        | WorkflowName | stageName | TaskName   | PathName | Host | AnsibleUserName | AnsiblePassword | BambooHost            | BambooUserName | BambooPassword | BambooPort | BambooPlanKey | BambooProjectkey | BambooBuildKey | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
+      | ananda@matildacloud.com | Ananda123@Matilda | TestMarch15_APP_Version1 | Release Description | New_Enironment_Version | NewWorkflow  | Maneesh   | BambooTask | Path     | 8080 | admin           | admin           | http://54.149.196.230 | matilda        | matilda        |       8050 | MAT-TEST      | MAT              | TEST           | Template_March15 | New_TargetEnvironment_March15 | Success           |
 
   @ReleaseManagement_Create_Release_Using_Existing_Template
   Scenario Outline: Release_Management(Create Release using Existing Template) in Chrome
@@ -65,16 +67,18 @@ Feature: Release Management Automation Scenarios
     And Enter Release Name as "<ReleaseName>"
     And Click on Project Field and Select Project
     And Click on Application and Select Application
-    And Click on Release Version and Select Release Version
+    And Click on Release Plan and Select Release Plan
     #And Click on Date picker and Select Today
     And Click Description
     And Enter Description as "<Description>"
     Then Click Save and Next
+    Then Verify Release is Created or not
     Then Click on Create New Environment Button
     And Click on Environment Name Field
     And Enter Environment as "<EnvironmentName>"
     And Click on Environment Type and Select Environment Type
     Then Click on Save Button
+    Then Verify Environment is Created or not
     Then Click on Create Workflow Icon
     And Click on Workflow Name Text Box
     And Enter Workflow Name as "<WorkflowName>"
@@ -87,10 +91,10 @@ Feature: Release Management Automation Scenarios
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | ReleaseName           | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
-      | March14_Release_ETE_5 | Release Description | New_Enironment_Version | NewWFNAB     | Success           |
+      | ReleaseName              | Description         | EnvironmentName        | WorkflowName     | ApplicationStatus |
+      | TestMarch15_APP_Version2 | Release Description | New_Enironment_Version | ExistingTemplate | Success           |
 
-  @ReleaseManagement_Infra_Releas
+  @ReleaseManagement_Infra_Release
   Scenario Outline: Release_Management_Infrastructure in Chrome
     Then Click on Release List Tab
     Then Click on Create New Release Button
@@ -98,11 +102,12 @@ Feature: Release Management Automation Scenarios
     And Enter Release Name as "<ReleaseName>"
     And Click on Project Field and Select Project
     #And Click on Application and Select Application
-    And Click on Release Version and Select Release Version
+    And Click on Infra Release Plan and Select Infra Release Plan
     #And Click on Date picker and Select Today
     And Click Description
     And Enter Description as "<Description>"
     Then Click Save and Next
+    Then Verify Infrastructure Release is created or not
     Then Click on Environments Tab
     #Then Click on Create New Environment Button
     #And Click on Environment Name Field
@@ -142,5 +147,5 @@ Feature: Release Management Automation Scenarios
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | Username                | Password          | ReleaseName           | Description         | EnvironmentName        | WorkflowName | stageName | TaskName   | PathName | Host | AnsibleUserName | AnsiblePassword | BambooHost            | BambooUserName | BambooPassword | BambooPort | BambooPlanKey | BambooProjectkey | BambooBuildKey | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
-      | ananda@matildacloud.com | Ananda123@Matilda | March14_Release_ETE_6 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | BambooTask | Path     | 8080 | admin           | admin           | http://54.149.196.230 | matilda        | matilda        |       8050 | MAT-TEST      | MAT              | TEST           | Template_March14 | New_TargetEnvironment_March14 | InProgress        |
+      | Username                | Password          | ReleaseName                | Description         | EnvironmentName        | WorkflowName | stageName | TaskName   | PathName | Host | AnsibleUserName | AnsiblePassword | BambooHost            | BambooUserName | BambooPassword | BambooPort | BambooPlanKey | BambooProjectkey | BambooBuildKey | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
+      | ananda@matildacloud.com | Ananda123@Matilda | TestMarch15_Infra_Version1 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | BambooTask | Path     | 8080 | admin           | admin           | http://54.149.196.230 | matilda        | matilda        |       8050 | MAT-TEST      | MAT              | TEST           | Template_March15 | New_TargetEnvironment_March15 | Success           |

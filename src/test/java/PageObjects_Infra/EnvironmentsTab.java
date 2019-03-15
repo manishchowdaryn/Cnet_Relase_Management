@@ -19,6 +19,19 @@ public class EnvironmentsTab extends BaseUtil {
 		PageFactory.initElements(driver, this);
 
 	}
+	
+	
+	@FindBy(how = How.XPATH, using = "//li[2]/span")			 	 
+	public WebElement ImpactedSystemsTab;
+
+
+
+	public WebElement ImpactedSystemsTab() {
+		return ImpactedSystemsTab;
+
+	}
+	
+	
 	@FindBy(how = How.XPATH, using = "//li[3]/span")			 	 
 	public WebElement ClickEnvironmentsTab;
 

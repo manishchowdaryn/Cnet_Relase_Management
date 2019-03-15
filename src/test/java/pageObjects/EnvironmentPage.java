@@ -18,6 +18,16 @@ public class EnvironmentPage extends BaseUtil {
 		PageFactory.initElements(driver, this);
 
 	}
+	
+	
+	
+	@FindBy(how = How.XPATH, using = "//div/div[1]/div[2]/button/span/span")			  
+	public WebElement Environmentbutton;
+
+	public WebElement Environmentbutton() {
+		return Environmentbutton;
+
+	}
 
 	@FindBy(how = How.XPATH, using = "//div/div[1]/div[2]/button/span/span")			 //div[2]/div[2]/div/div/div[2]/button	 
 	public WebElement ClickCreateNewEnvironment;
@@ -61,7 +71,16 @@ public class EnvironmentPage extends BaseUtil {
 	public WebElement ClickSave() {
 		return ClickSave;
 	}
+	
+	
+	@FindBy(how = How.XPATH, using = "//span/button")
+	public WebElement CreateWorkflowbutton;
 
+	public WebElement CreateWorkflowbutton() {
+		return CreateWorkflowbutton;
+	}
+
+	
 	@FindBy(how = How.XPATH, using = "//span/button")
 	public WebElement ClickCreateWorkflowIcon;
 

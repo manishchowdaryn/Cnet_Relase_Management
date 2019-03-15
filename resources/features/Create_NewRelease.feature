@@ -30,12 +30,13 @@ Feature: Create New Release
     And Click on add stage and Enter stage Name as "<stageName>"
     Then Click on Tick Mark
     Then Click on Icon to add task
-    And Click on execution and ansible and click on run play book host
+    #And Click on execution and ansible and click on run play book host
     And Click on Task Name and Enter Task Name as "<TaskName>"
     Then Click on Tick Mark to create task
     Then Click on the vertical ellipses
     And Click on Edit Configuration for task
-    And Enter PathName and Host and AnsibleUserName and AnsiblePassword as "<PathName>" and "<Host>" and "<AnsibleUserName>" and "<AnsiblePassword>"
+    #And Enter PathName and Host and AnsibleUserName and AnsiblePassword as "<PathName>" and "<Host>" and "<AnsibleUserName>" and "<AnsiblePassword>"
+    
     Then Click on Save Workflow button
     Then Click on View Workflow Icon
     Then Click on Save as Template

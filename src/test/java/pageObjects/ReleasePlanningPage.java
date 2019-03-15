@@ -44,10 +44,15 @@ public class ReleasePlanningPage {
 	public WebElement SelectApplication;
 
 	@FindBy(how = How.XPATH, using = "//div[2]/div/div/kendo-dropdownlist/span/span")
-	public WebElement ClickReleaseVersion;
+	public WebElement ClickReleasePlan;
 
-	@FindBy(how = How.XPATH, using = "//kendo-list/div/ul/li[2]")
-	public WebElement SelectReleaseVersion;
+	@FindBy(how = How.XPATH, using = "//li[3]/span[2]/p")
+	public WebElement SelectReleasePlan;
+	
+	@FindBy(how = How.XPATH, using = "//div/div/kendo-dropdownlist/span/span")
+	public WebElement ClickInfraReleasePlan;
+	@FindBy(how = How.XPATH, using = "//li[4]/span[2]/h6")
+	public WebElement SelectInfraReleasePlan;	
 
 	@FindBy(how = How.XPATH, using = "//kendo-datepicker/span/span/span")
 	public WebElement ClickonDatePicker;
@@ -99,15 +104,22 @@ public class ReleasePlanningPage {
 		return SelectApplication;
 	}
 
-	public WebElement ClickReleaseVersion() {
+	public WebElement ClickReleasePlan() {
 
-		return ClickReleaseVersion;
+		return ClickReleasePlan;
 	}
 
-	public WebElement SelectReleaseVersion() {
-		return SelectReleaseVersion;
+	public WebElement SelectReleasePlan() {
+		return SelectReleasePlan;
+	}
+	public WebElement ClickInfraReleasePlan() {
+
+		return ClickInfraReleasePlan;
 	}
 
+	public WebElement SelectInfraReleasePlan() {
+		return SelectInfraReleasePlan;
+	}
 	public WebElement ClickonDatePicker() {
 		return ClickonDatePicker;
 	}

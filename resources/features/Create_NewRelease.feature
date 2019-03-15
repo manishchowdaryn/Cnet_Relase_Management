@@ -12,16 +12,18 @@ Feature: Create New Release
     And Enter Release Name as "<ReleaseName>"
     And Click on Project Field and Select Project
     And Click on Application and Select Application
-    And Click on Release Version and Select Release Version
+    And Click on Release Plan and Select Release Plan
     #And Click on Date picker and Select Today
     And Click Description
     And Enter Description as "<Description>"
     Then Click Save and Next
+    Then Verify Release is Created or not
     Then Click on Create New Environment Button
     And Click on Environment Name Field
     And Enter Environment as "<EnvironmentName>"
     And Click on Environment Type and Select Environment Type
     Then Click on Save Button
+    Then Verify Environment is Created or not
     Then Click on Create Workflow Icon
     And Click on Workflow Name Text Box
     And Enter Workflow Name as "<WorkflowName>"
@@ -30,13 +32,13 @@ Feature: Create New Release
     And Click on add stage and Enter stage Name as "<stageName>"
     Then Click on Tick Mark
     Then Click on Icon to add task
-    #And Click on execution and ansible and click on run play book host
+    And Click on tracking and bamboo and click on Queue Build
     And Click on Task Name and Enter Task Name as "<TaskName>"
     Then Click on Tick Mark to create task
     Then Click on the vertical ellipses
     And Click on Edit Configuration for task
     #And Enter PathName and Host and AnsibleUserName and AnsiblePassword as "<PathName>" and "<Host>" and "<AnsibleUserName>" and "<AnsiblePassword>"
-    
+    And Enter Bamboo Host and BambooUserName and BambooPassword and BambooPort and BambooPlanKey and BambooProjectKey and BambooBuildKey as "<BambooHost>" and "<BambooUserName>" and "<BambooPassword>" and "<BambooPort>" and "<BambooPlanKey>" and "<BambooProjectkey>" and "<BambooBuildKey>"
     Then Click on Save Workflow button
     Then Click on View Workflow Icon
     Then Click on Save as Template
@@ -53,5 +55,5 @@ Feature: Create New Release
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | Username                | Password          | ReleaseName               | Description         | EnvironmentName        | WorkflowName | stageName | TaskName    | PathName | Host | AnsibleUserName | AnsiblePassword | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
-      | ananda@matildacloud.com | Ananda123@Matilda | March13_Release_Version23 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | AnsibleTask | Path     | 8080 | admin           | admin           | Template_March13 | New_TargetEnvironment_March13 | InProgress        |
+      | Username                | Password          | ReleaseName              | Description         | EnvironmentName        | WorkflowName | stageName | TaskName   | PathName | Host | AnsibleUserName | AnsiblePassword | BambooHost            | BambooUserName | BambooPassword | BambooPort | BambooPlanKey | BambooProjectkey | BambooBuildKey | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
+      | ananda@matildacloud.com | Ananda123@Matilda | TestMarch15_APP_Version1 | Release Description | New_Enironment_Version | NewWorkflow  | Maneesh   | BambooTask | Path     | 8080 | admin           | admin           | http://54.149.196.230 | matilda        | matilda        |       8050 | MAT-TEST      | MAT              | TEST           | Template_March15 | New_TargetEnvironment_March15 | Success           |

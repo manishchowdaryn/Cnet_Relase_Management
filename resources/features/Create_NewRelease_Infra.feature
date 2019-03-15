@@ -11,11 +11,12 @@ Feature: Create New Infrastructure Release
     And Enter Release Name as "<ReleaseName>"
     And Click on Project Field and Select Project
     #And Click on Application and Select Application
-    And Click on Release Version and Select Release Version
+    And Click on Infra Release Plan and Select Infra Release Plan
     #And Click on Date picker and Select Today
     And Click Description
     And Enter Description as "<Description>"
     Then Click Save and Next
+    Then Verify Infrastructure Release is created or not
     Then Click on Environments Tab
     #Then Click on Create New Environment Button
     #And Click on Environment Name Field
@@ -55,5 +56,5 @@ Feature: Create New Infrastructure Release
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | Username                | Password          | ReleaseName              | Description         | EnvironmentName        | WorkflowName | stageName | TaskName   | PathName | Host | AnsibleUserName | AnsiblePassword | BambooHost            | BambooUserName | BambooPassword | BambooPort | BambooPlanKey | BambooProjectkey | BambooBuildKey | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
-      | ananda@matildacloud.com | Ananda123@Matilda | March14_Release_Infra_V5 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | BambooTask | Path     | 8080 | admin           | admin           | http://54.149.196.230 | matilda        | matilda        |       8050 | MAT-TEST      | MAT              | TEST           | Template_March14 | New_TargetEnvironment_March14 | InProgress        |
+      | Username                | Password          | ReleaseName                | Description         | EnvironmentName        | WorkflowName | stageName | TaskName   | PathName | Host | AnsibleUserName | AnsiblePassword | BambooHost            | BambooUserName | BambooPassword | BambooPort | BambooPlanKey | BambooProjectkey | BambooBuildKey | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
+      | ananda@matildacloud.com | Ananda123@Matilda | TestMarch15_Infra_Version1 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | BambooTask | Path     | 8080 | admin           | admin           | http://54.149.196.230 | matilda        | matilda        |       8050 | MAT-TEST      | MAT              | TEST           | Template_March15 | New_TargetEnvironment_March15 | Success           |

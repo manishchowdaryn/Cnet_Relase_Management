@@ -12,16 +12,18 @@ Feature: Create Release using Existing Template
     And Enter Release Name as "<ReleaseName>"
     And Click on Project Field and Select Project
     And Click on Application and Select Application
-    And Click on Release Version and Select Release Version
+    And Click on Release Plan and Select Release Plan
     #And Click on Date picker and Select Today
     And Click Description
     And Enter Description as "<Description>"
     Then Click Save and Next
+    Then Verify Release is Created or not
     Then Click on Create New Environment Button
     And Click on Environment Name Field
     And Enter Environment as "<EnvironmentName>"
     And Click on Environment Type and Select Environment Type
     Then Click on Save Button
+    Then Verify Environment is Created or not
     Then Click on Create Workflow Icon
     And Click on Workflow Name Text Box
     And Enter Workflow Name as "<WorkflowName>"
@@ -32,7 +34,6 @@ Feature: Create Release using Existing Template
     Then Click on Save Workflow button
     Then Click on Start Environment Release Icon
     Then Verify the Status as "<ApplicationStatus>"
-
     Examples: 
       | Username                | Password          | ReleaseName                  | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
       | ananda@matildacloud.com | Ananda123@Matilda | March_15_ExistingTemplate_v1 | Release Description | New_Enironment_Version | NewWFNAB     | Success           |

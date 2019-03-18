@@ -89,6 +89,29 @@ public class Abstract extends BaseUtil {
 
 		}
 	}
+	@SuppressWarnings("deprecation")
+	@Step("Method to wait until Text is displayed")
+	public static WebElement waitForTextToAppear(BaseUtil base, WebElement webElement) throws IOException, AWTException {
+		
+		try {
+			FluentWait<WebDriver> waitforuntilText = new FluentWait<WebDriver>(base.driver)
+					.withTimeout(500, TimeUnit.SECONDS).pollingEvery(60, TimeUnit.MILLISECONDS)
+					.ignoring(NoSuchElementException.class);
+			waitforuntilText.until(ExpectedConditions.textToBePresentInElement(By.xpath("//td[3]/p/span"), "Success"));
+		} catch (NoSuchElementException exc) {
+			exc.printStackTrace();
+
+		} catch (WebDriverException e) {
+			e.printStackTrace();
+			// Method to capture failed Screenshot
+		
+			screenshotcapture();
+			
+		}
+		return webElement;
+	    
+		
+	}
 	
 
 	@Step("Method to wait until condition is satisfied")
@@ -100,6 +123,7 @@ public class Abstract extends BaseUtil {
 					.withTimeout(30, TimeUnit.SECONDS).pollingEvery(60, TimeUnit.MILLISECONDS)
 					.ignoring(NoSuchElementException.class);
 			waitforelement.until(ExpectedConditions.elementToBeClickable(webElement));
+			
 			base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 		} catch (NoSuchElementException exc) {
 			exc.printStackTrace();

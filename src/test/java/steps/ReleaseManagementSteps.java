@@ -15,6 +15,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.server.handler.FindElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.testng.Assert;
 
 import baseClass.BaseUtil;
@@ -851,10 +852,14 @@ public class ReleaseManagementSteps extends BaseUtil {
 	public void VerifyStatus(String ApplicationStatus) throws Throwable {
 		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 		Thread.sleep(5000);
+		
+		WebElement WaituntilText = Abstract.waitForTextToAppear(base, EnvironmentPage.VerifyStatus());
+		WaituntilText.isDisplayed();
 		WebElement ApplicationStatusLocation = Abstract.waitUntilConditionSatisfy(base, EnvironmentPage.VerifyStatus());
 		String ApplicationStatusText = ApplicationStatusLocation.getText();
 		Abstract.validation(ApplicationStatusText, ApplicationStatus);
-		// Assert.assertEquals(ApplicationStatusText, ApplicationStatus);
+		
+		
 		logger.info("Verify the statsu as :" + ApplicationStatus);
 
 	}

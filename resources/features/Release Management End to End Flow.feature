@@ -55,8 +55,8 @@ Feature: Release Management Automation Scenarios
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | Username                | Password          | ReleaseName              | Description         | EnvironmentName        | WorkflowName | stageName | TaskName   | PathName | Host | AnsibleUserName | AnsiblePassword | BambooHost            | BambooUserName | BambooPassword | BambooPort | BambooPlanKey | BambooProjectkey | BambooBuildKey | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
-      | ananda@matildacloud.com | Ananda123@Matilda | TestMarch15_APP_Version1 | Release Description | New_Enironment_Version | NewWorkflow  | Maneesh   | BambooTask | Path     | 8080 | admin           | admin           | http://54.149.196.230 | matilda        | matilda        |       8050 | MAT-TEST      | MAT              | TEST           | Template_March15 | New_TargetEnvironment_March15 | Success           |
+      | Username                | Password          | ReleaseName               | Description         | EnvironmentName        | WorkflowName | stageName | TaskName   | PathName | Host | AnsibleUserName | AnsiblePassword | BambooHost            | BambooUserName | BambooPassword | BambooPort | BambooPlanKey | BambooProjectkey | BambooBuildKey | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
+      | ananda@matildacloud.com | Ananda123@Matilda | TestMarch18_APP_Version11 | Release Description | New_Enironment_Version | NewWorkflow  | Maneesh   | BambooTask | Path     | 8080 | admin           | admin           | http://54.149.196.230 | matilda        | matilda        |       8050 | MAT-TEST      | MAT              | TEST           | Template_March18 | New_TargetEnvironment_March18 | Success           |
 
   @ReleaseManagement_Create_Release_Using_Existing_Template
   Scenario Outline: Release_Management(Create Release using Existing Template) in Chrome
@@ -91,8 +91,8 @@ Feature: Release Management Automation Scenarios
     Then Verify the Status as "<ApplicationStatus>"
 
     Examples: 
-      | ReleaseName              | Description         | EnvironmentName        | WorkflowName     | ApplicationStatus |
-      | TestMarch15_APP_Version2 | Release Description | New_Enironment_Version | ExistingTemplate | Success           |
+      | ReleaseName               | Description         | EnvironmentName        | WorkflowName     | ApplicationStatus |
+      | TestMarch18_APP_Version11 | Release Description | New_Enironment_Version | ExistingTemplate | Success           |
 
   @ReleaseManagement_Infra_Release
   Scenario Outline: Release_Management_Infrastructure in Chrome
@@ -148,4 +148,4 @@ Feature: Release Management Automation Scenarios
 
     Examples: 
       | Username                | Password          | ReleaseName                | Description         | EnvironmentName        | WorkflowName | stageName | TaskName   | PathName | Host | AnsibleUserName | AnsiblePassword | BambooHost            | BambooUserName | BambooPassword | BambooPort | BambooPlanKey | BambooProjectkey | BambooBuildKey | TemplateName     | TargetEnvironmentName         | ApplicationStatus |
-      | ananda@matildacloud.com | Ananda123@Matilda | TestMarch15_Infra_Version1 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | BambooTask | Path     | 8080 | admin           | admin           | http://54.149.196.230 | matilda        | matilda        |       8050 | MAT-TEST      | MAT              | TEST           | Template_March15 | New_TargetEnvironment_March15 | Success           |
+      | ananda@matildacloud.com | Ananda123@Matilda | TestMarch18_Infra_Version5 | Release Description | New_Enironment_Version | NewWFNAB     | Maneesh   | BambooTask | Path     | 8080 | admin           | admin           | http://54.149.196.230 | matilda        | matilda        |       8050 | MAT-TEST      | MAT              | TEST           | Template_March18 | New_TargetEnvironment_March18 | Success           |

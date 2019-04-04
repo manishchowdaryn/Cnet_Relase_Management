@@ -4,7 +4,6 @@ import java.awt.AWTException;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -13,11 +12,8 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -95,7 +91,7 @@ public class Abstract extends BaseUtil {
 		
 		try {
 			FluentWait<WebDriver> waitforuntilText = new FluentWait<WebDriver>(base.driver)
-					.withTimeout(500, TimeUnit.SECONDS).pollingEvery(60, TimeUnit.MILLISECONDS)
+					.withTimeout(5, TimeUnit.SECONDS).pollingEvery(60, TimeUnit.MILLISECONDS)
 					.ignoring(NoSuchElementException.class);
 			waitforuntilText.until(ExpectedConditions.textToBePresentInElement(By.xpath("//td[3]/p/span"), "Success"));
 		} catch (NoSuchElementException exc) {

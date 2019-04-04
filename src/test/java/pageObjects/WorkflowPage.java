@@ -103,7 +103,7 @@ public class WorkflowPage extends BaseUtil {
 	}
 	
 	
-	@FindBy(how = How.XPATH, using = "//div[4]/li/a")			   //div[2]/div/div/ul/div[5]/li/ul/div[3]/li
+	@FindBy(how = How.XPATH, using = "//div/ul/div/li/ul/div[4]/li/a")			   //div[2]/div/div/ul/div[5]/li/ul/div[3]/li
 	public WebElement bamboo;
 
 	public WebElement bamboo() {

@@ -124,6 +124,21 @@ public class BambooPluginConfigurationsPage extends BaseUtil{
 		return EnterBuildKey;
 
 	}
+	@FindBy(how = How.XPATH, using = "//div[8]/app-release-form-template/div/div/div/input")
+	public WebElement ClickonJobKey;
+
+	public WebElement ClickonJobKey() {
+		return ClickonBuildKey;
+
+	}
+	
+	@FindBy(how = How.XPATH, using = "//div[8]/app-release-form-template/div/div/div/input")
+	public WebElement EnterJobKey;
+
+	public WebElement EnterJobKey() {
+		return EnterJobKey;
+
+	}
 
 	@FindBy(how = How.XPATH, using = "//div[2]/button")
 	public WebElement ClickonBambooPluginSave;
@@ -132,5 +147,7 @@ public class BambooPluginConfigurationsPage extends BaseUtil{
 		return ClickonBambooPluginSave;
 
 	}
+	
+	
 }
 

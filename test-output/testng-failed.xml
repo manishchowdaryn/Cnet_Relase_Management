@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Release Management]">
-  <test name="Release Management Scenarios">
-    <classes>
-      <class name="runner.RunCukes"/>
-    </classes>
-  </test> <!-- Release Management Scenarios -->
-  <test name="Release Management Scenarios(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
       <class name="runner.RunCukes">
         <methods>
@@ -18,5 +13,5 @@
         </methods>
       </class> <!-- runner.RunCukes -->
     </classes>
-  </test> <!-- Release Management Scenarios(failed) -->
-</suite> <!-- Failed suite [Release Management] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

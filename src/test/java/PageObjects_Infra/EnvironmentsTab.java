@@ -42,7 +42,12 @@ public class EnvironmentsTab extends BaseUtil {
 
 	}
 	
-	
+	@FindBy(how = How.XPATH, using = "//td[4]/span/button")
+	public WebElement ClickInfraCreateWorkflowIcon;
+
+	public WebElement ClickInfraCreateWorkflowIcon() {
+		return ClickInfraCreateWorkflowIcon;
+	}
 	
 	
 }

@@ -46,13 +46,13 @@ public class ReleasePlanningPage {
 	@FindBy(how = How.XPATH, using = "//div[2]/div/div/kendo-dropdownlist/span/span")
 	public WebElement ClickReleasePlan;
 
-	@FindBy(how = How.XPATH, using = "//li[3]/span[2]/p")
+	@FindBy(how = How.XPATH, using = "//li[2]/span[2]")
 	public WebElement SelectReleasePlan;
 	
 	@FindBy(how = How.XPATH, using = "//div/div/kendo-dropdownlist/span/span")
 	public WebElement ClickInfraReleasePlan;
 	
-	@FindBy(how = How.XPATH, using = "//li[2]/span[2]/p")
+	@FindBy(how = How.XPATH, using = "//h6")
 	public WebElement SelectInfraReleasePlan;	
 
 	@FindBy(how = How.XPATH, using = "//kendo-datepicker/span/span/span")

@@ -314,6 +314,18 @@ public class ReleaseManagementSteps extends BaseUtil {
 		logger.info("Click Create Workflow Icon");
 
 	}
+	
+	@Then ("^Click on Infra Create Workflow Icon$")
+	public void ClickInfraCreateWorkflowIcon() throws Throwable {
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+
+		WebElement ClickInfraCreateWorkflowIcon = Abstract.waitUntilConditionSatisfy(base,
+				EnvironmentsTab.ClickInfraCreateWorkflowIcon());
+		ClickInfraCreateWorkflowIcon.click();
+		logger.info("Click Create Workflow Icon");
+
+	}
+	
 
 	@And("^Click on Workflow Name Text Box$")
 	public void ClickWorkflowName() throws Throwable {
@@ -525,9 +537,9 @@ public class ReleaseManagementSteps extends BaseUtil {
 	}
 */
 
-	@And("^Enter Bamboo Host and BambooUserName and BambooPassword and BambooPort and BambooPlanKey and BambooProjectKey and BambooBuildKey as \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
-	public void enter_BambooHost_and_BambooUserName_and_BambooPassword_and_BambooPort_and_BambooPlanKey_and_BambooProjectkey_and_BambooBuildKey_as(String BambooHost,
-			String BambooUserName, String BambooPassword, String BambooPort, String BambooPlanKey, String BambooProjectkey, String BambooBuildKey) throws Throwable {
+	@And("^Enter Bamboo Host and BambooUserName and BambooPassword and BambooPort and BambooPlanKey and BambooProjectKey and BambooBuildKey and BambooJobKey as \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void enter_BambooHost_and_BambooUserName_and_BambooPassword_and_BambooPort_and_BambooPlanKey_and_BambooProjectkey_and_BambooBuildKey_and_BambooJobKey_as(String BambooHost,
+			String BambooUserName, String BambooPassword, String BambooPort, String BambooPlanKey, String BambooProjectkey, String BambooBuildKey, String BambooJobKey) throws Throwable {
 		
 		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 		WebElement ClickonBambooHost = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.ClickonBamboohost());
@@ -608,10 +620,23 @@ public class ReleaseManagementSteps extends BaseUtil {
 		logger.info("BambooBuildKey :" + BambooBuildKey);
 		
 		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement ClickonJobKey = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.ClickonJobKey);
+		ClickonJobKey.isEnabled();
+		ClickonJobKey.click();
+		logger.info("Click on Bamboo Job Key");
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		WebElement EnterJobKey = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.EnterJobKey());
+		EnterJobKey.sendKeys(BambooJobKey);
+		logger.info("BambooJobKey :" + BambooJobKey);
+		
+		base.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 		WebElement ClickonBambooPluginSave = Abstract.waitUntilConditionSatisfy(base, BambooPluginConfigurationsPage.ClickonBambooPluginSave());
 		ClickonBambooPluginSave.isEnabled();
 		ClickonBambooPluginSave.click();
 		logger.info("Click on Bamboo Build Key");
+		
+		
 		
 	}
 			

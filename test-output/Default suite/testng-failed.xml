@@ -1,31 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
-    <classes>
-      <class name="com.cucumber.listener.Reporter"/>
-      <class name="pageObjects.Login"/>
-      <class name="steps.ChangeRequestSteps"/>
-      <class name="pageObjects.ChangeRequest"/>
-      <class name="pageObjects.Logout"/>
-      <class name="pageObjects.AssessPage"/>
-      <class name="reusableFunction.Abstract"/>
-      <class name="baseClass.BaseUtil"/>
-      <class name="steps.ReusableSteps"/>
-      <class name="steps.Hook"/>
-      <class name="com.cucumber.listener.ExtentProperties"/>
-      <class name="com.cucumber.listener.ExtentCucumberFormatter"/>
-      <class name="pageObjects.FilterNavigation"/>
-      <class name="runner.RunCukes"/>
-    </classes>
-  </test> <!-- Default test -->
+<suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
       <class name="runner.RunCukes">
         <methods>
           <include name="teardown"/>
           <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="0 1 2"/>
+          <include name="feature" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="tearDownClass"/>
         </methods>

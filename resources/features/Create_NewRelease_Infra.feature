@@ -37,7 +37,7 @@ Feature: Create New Infrastructure Release
     Then Click on the vertical ellipses
     And Click on Edit Configuration for task
     #And Enter PathName and Host and AnsibleUserName and AnsiblePassword as "<PathName>" and "<Host>" and "<AnsibleUserName>" and "<AnsiblePassword>"
-    And Enter Bamboo Host and BambooUserName and BambooPassword and BambooPort and BambooPlanKey and BambooProjectKey and BambooBuildKey as "<BambooHost>" and "<BambooUserName>" and "<BambooPassword>" and "<BambooPort>" and "<BambooPlanKey>" and "<BambooProjectkey>" and "<BambooBuildKey>"
+    #And Enter Bamboo Host and BambooUserName and BambooPassword and BambooPort and BambooPlanKey and BambooProjectKey and BambooBuildKey as "<BambooHost>" and "<BambooUserName>" and "<BambooPassword>" and "<BambooPort>" and "<BambooPlanKey>" and "<BambooProjectkey>" and "<BambooBuildKey>"
     Then Click on Save Workflow button
     Then Click on Environments Tab
     Then Click on View Workflow Icon

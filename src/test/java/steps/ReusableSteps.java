@@ -26,11 +26,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 import pageObjects.Login;
-import pageObjects.DashboardPage;
+
 import pageObjects.ReleasePlanningPage;
-import pageObjects.EnvironmentPage;
+
 import pageObjects.WorkflowPage;
-import pageObjects.ReleaselistSearchPage;
 import pageObjects.AnsiblePluginConfigurationsPage;
 
 import reusableFunction.Abstract;
@@ -42,11 +41,11 @@ public class ReusableSteps extends BaseUtil {
 
 	public BaseUtil base;
 	public Login Login;
-	public DashboardPage DashboardPage;
+
 	public ReleasePlanningPage ReleasePlanningPage;
-	public EnvironmentPage EnvironmentPage;
+
 	public WorkflowPage WorkflowPage;
-	public ReleaselistSearchPage ReleaselistSearchPage;
+
 	public AnsiblePluginConfigurationsPage PluginConfigurationsPage;
 	public Abstract Abstract;
 	static String folderName;
@@ -58,12 +57,12 @@ public class ReusableSteps extends BaseUtil {
 
 		this.base = base;
 		Login = new Login(base.driver);
-		DashboardPage = new DashboardPage(base.driver);
+		
 		ReleasePlanningPage = new ReleasePlanningPage(base.driver);
-		EnvironmentPage = new EnvironmentPage(base.driver);
+	
 		WorkflowPage = new WorkflowPage(base.driver);
 		Abstract = new Abstract(base.driver);
-		ReleaselistSearchPage = new ReleaselistSearchPage(base.driver);
+
 		PluginConfigurationsPage = new AnsiblePluginConfigurationsPage(base.driver);
 
 	}
@@ -84,7 +83,7 @@ public class ReusableSteps extends BaseUtil {
 
 		String runTimePageTitle = base.driver.getTitle();
 
-		String expectediMageHeaderText = "Matilda";
+		String expectediMageHeaderText = "Matilda - Home Page";
 
 		boolean pageValidation = runTimePageTitle.equalsIgnoreCase(expectediMageHeaderText);
 		base.driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
@@ -144,6 +143,7 @@ public class ReusableSteps extends BaseUtil {
 		logger.info("Clicked on Sign In Button");
 
 	}
+	
 
 //	@Then("^Switch to Multiple Window and Select value as \"([^\"]*)\"$")
 //	public void HandleMultipleWindows(String lookupValue) throws IOException, InterruptedException, AWTException {

@@ -5,7 +5,6 @@ Feature: Create Release using Existing Template
     Given Launch Browser and access the Matilda URL
     Then Verify whether Login page is correctly opened or not
     And Enter Username and Password as "<Username>" and "<Password>"
-    Then Click on Release List Tab
     Then Click on Create New Release Button
     Then Click on Release Type and Select Release Type
     And Click on Release Name Text Box
@@ -34,6 +33,7 @@ Feature: Create Release using Existing Template
     Then Click on Save Workflow button
     Then Click on Start Environment Release Icon
     Then Verify the Status as "<ApplicationStatus>"
+
     Examples: 
-      | Username                | Password          | ReleaseName                  | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
-      | ananda@matildacloud.com | Ananda123@Matilda | March_15_ExistingTemplate_v1 | Release Description | New_Enironment_Version | NewWFNAB     | Success           |
+      | Username       | Password | ReleaseName                  | Description         | EnvironmentName        | WorkflowName | ApplicationStatus |
+      | maneesh@qa.com | matilda  | March_15_ExistingTemplate_v1 | Release Description | New_Enironment_Version | NewWFNAB     | Success           |

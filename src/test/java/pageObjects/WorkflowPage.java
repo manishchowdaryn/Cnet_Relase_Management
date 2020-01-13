@@ -185,7 +185,7 @@ public class WorkflowPage extends BaseUtil {
 	
 	
 	
-	@FindBy(how = How.XPATH, using = "//td[4]/button")                //td[4]/button[1]/span
+	@FindBy(how = How.XPATH, using = "//td[4]/button")               
 	public WebElement clickOnViewWorkflow;
 
 	public WebElement clickOnViewWorkflow() {
@@ -262,4 +262,50 @@ public class WorkflowPage extends BaseUtil {
 
 	}
 	
+	@FindBy(how = How.XPATH, using = "//span/span")
+	public WebElement ClickOnStartReleaseButton;
+
+
+	public WebElement ClickOnStartReleaseButton() {
+		return ClickOnStartReleaseButton;
+
+	}
+	
+	@FindBy(how = How.XPATH, using = "//button[2]/span/span")
+	public WebElement ClickOnViewWorkflowButton;
+
+
+	public WebElement ClickOnViewWorkflowButton() {
+		return ClickOnViewWorkflowButton;
+
+	}
+	
+	@FindBy(how = How.XPATH, using = "//span/span")
+	public WebElement CaptureWorkflowStatus;
+
+	public WebElement CaptureWorkflowStatus() {
+		return CaptureWorkflowStatus;
+	}
+	
+	
+	@FindBy(how = How.XPATH, using = "/html/body/app-root/app-full-layout/div/div[2]/div/div/div/matilda-workflow/div[1]/div[2]/button[2]")
+	public WebElement ClickPauseReleaseButton;
+
+	public WebElement ClickPauseReleaseButton() {
+		return ClickPauseReleaseButton;
+	}
+	
+	@FindBy(how = How.XPATH, using = "/html/body/app-root/app-full-layout/div/div[2]/div/div/div/matilda-workflow/div[2]/div/div[3]/div/div/div/div[1]/div[1]/span/span")
+	public WebElement CapturePausedWorkflowStatus;
+
+	public WebElement CapturePausedWorkflowStatus() {
+		return CapturePausedWorkflowStatus;
+	}
+	
+	@FindBy(how = How.CSS, using = "//button[2]")
+	public WebElement ClickResumeReleaseButton;
+
+	public WebElement ClickResumeReleaseButton() {
+		return ClickResumeReleaseButton;
+	}
 }

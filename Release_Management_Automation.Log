@@ -1,165 +1,30 @@
-2019-04-04 15:14:09 INFO  Hook:74 - Chrome Browser Launched Successfully
-2019-04-04 15:14:31 INFO  ReusableSteps:78 - Enter Matilda URL in the address bar of the browser
-2019-04-04 15:14:39 INFO  ReusableSteps:133 - Entered Username
-2019-04-04 15:14:39 INFO  ReusableSteps:139 - Entered Password
-2019-04-04 15:14:39 INFO  ReusableSteps:144 - Clicked on Sign In Button
-2019-04-04 15:14:42 INFO  BaseUtil:72 - Click on Release List Tab
-2019-04-04 15:14:43 INFO  BaseUtil:82 - Click on Create New Release Button
-2019-04-04 15:14:43 INFO  BaseUtil:95 - Clcik and Select ReleaseType
-2019-04-04 15:14:43 INFO  BaseUtil:106 - Click on Release Textbox
-2019-04-04 15:14:44 INFO  BaseUtil:117 - Release Name :TestApril04_APP_Version11
-2019-04-04 15:14:45 INFO  BaseUtil:129 - Click on Project Field and Select Project
-2019-04-04 15:14:45 INFO  BaseUtil:142 - Click on Application Field and Select Application
-2019-04-04 15:14:46 INFO  BaseUtil:155 - Click on Release Plan Field and Select Release Plan
-2019-04-04 15:14:46 INFO  BaseUtil:191 - Click on Description
-2019-04-04 15:14:46 INFO  BaseUtil:201 - Description :Release Description
-2019-04-04 15:14:49 INFO  BaseUtil:212 - Click on Save and Next
-2019-04-04 15:14:49 INFO  BaseUtil:222 - Verify whether Release is Created or not
-2019-04-04 15:14:49 INFO  BaseUtil:237 - Click on Create New Environment Button
-2019-04-04 15:14:49 INFO  BaseUtil:250 - Click on Environment Name Field
-2019-04-04 15:14:50 INFO  BaseUtil:261 - EnvironmentName :New_Enironment_Version
-2019-04-04 15:14:50 INFO  BaseUtil:273 - Click Environment Type
-2019-04-04 15:14:51 INFO  BaseUtil:278 - Select Environment Type
-2019-04-04 15:14:51 INFO  BaseUtil:289 - Click Save
-2019-04-04 15:14:52 INFO  BaseUtil:300 - Verify whether Environment is Created or not
-2019-04-04 15:14:52 INFO  BaseUtil:314 - Click Create Workflow Icon
-2019-04-04 15:14:52 INFO  BaseUtil:337 - Click on Workflow Name Textbox
-2019-04-04 15:14:53 INFO  BaseUtil:347 - WorkflowName :NewWorkflow
-2019-04-04 15:14:53 INFO  BaseUtil:357 - Click Frequency
-2019-04-04 15:14:53 INFO  BaseUtil:361 - Select Frequency
-2019-04-04 15:14:53 INFO  BaseUtil:681 - Click Save
-2019-04-04 15:14:53 INFO  BaseUtil:371 - Click on Add Stage
-2019-04-04 15:14:54 INFO  BaseUtil:375 - Stage Name :Maneesh
-2019-04-04 15:14:54 INFO  BaseUtil:386 - Click on Tick Mark
-2019-04-04 15:14:54 INFO  BaseUtil:396 - Click On Click To Task
-2019-04-04 15:14:54 INFO  BaseUtil:406 - Mouse Over on tracking
-2019-04-04 15:14:55 INFO  BaseUtil:411 - Mouse Over on bamboo
-2019-04-04 15:14:55 INFO  BaseUtil:416 - Click On Queue Build
-2019-04-04 15:14:55 INFO  BaseUtil:427 - Click On Task Name
-2019-04-04 15:14:56 INFO  BaseUtil:431 - Task Name:BambooTask
-2019-04-04 15:14:56 INFO  BaseUtil:441 - Click on Tick Mark to create task
-2019-04-04 15:14:56 INFO  BaseUtil:452 - Click on Vertical Ellipses
-2019-04-04 15:14:56 INFO  BaseUtil:463 - Click on Edit Configurations
-2019-04-04 15:14:57 INFO  BaseUtil:548 - Click on BambooHost
-2019-04-04 15:14:58 INFO  BaseUtil:553 - BambooHost :http://54.149.196.230
-2019-04-04 15:14:58 INFO  BaseUtil:560 - Click on Bamboo UserName
-2019-04-04 15:14:58 INFO  BaseUtil:565 - BambooUsername :matilda
-2019-04-04 15:14:58 INFO  BaseUtil:571 - Click on Bamboo Password
-2019-04-04 15:14:59 INFO  BaseUtil:576 - BambooPassword :matilda
-2019-04-04 15:14:59 INFO  BaseUtil:582 - Click on Bamboo Port
-2019-04-04 15:14:59 INFO  BaseUtil:587 - BambooPort :8050
-2019-04-04 15:15:00 INFO  BaseUtil:593 - Click on Bamboo Plan Key
-2019-04-04 15:15:00 INFO  BaseUtil:598 - BambooPlanKey :MAT-TEST
-2019-04-04 15:15:00 INFO  BaseUtil:604 - Click on Bamboo Project Key
-2019-04-04 15:15:01 INFO  BaseUtil:609 - BambooProjectkey :MAT
-2019-04-04 15:15:01 INFO  BaseUtil:615 - Click on Bamboo Build Key
-2019-04-04 15:15:01 INFO  BaseUtil:620 - BambooBuildKey :TEST
-2019-04-04 15:15:01 INFO  BaseUtil:626 - Click on Bamboo Job Key
-2019-04-04 15:15:02 INFO  BaseUtil:631 - BambooJobKey :Job
-2019-04-04 15:15:02 INFO  BaseUtil:637 - Click on Bamboo Build Key
-2019-04-04 15:15:05 INFO  BaseUtil:693 - Click Save Workflow
-2019-04-04 15:15:12 INFO  BaseUtil:704 - Click on View Workflow Icon
-2019-04-04 15:15:12 INFO  BaseUtil:715 - Click on Save as Template
-2019-04-04 15:15:12 INFO  BaseUtil:726 - Click on Template Name Textbox
-2019-04-04 15:15:13 INFO  BaseUtil:736 - Template Name :Template_April04
-2019-04-04 15:15:14 INFO  BaseUtil:748 - Click on Save Template button
-2019-04-04 15:15:16 INFO  BaseUtil:801 - Click on Clone Environment
-2019-04-04 15:15:17 INFO  BaseUtil:813 - Click on Template Name Textbox
-2019-04-04 15:15:18 INFO  BaseUtil:824 - Target Environment Name :New_TargetEnvironment_April04
-2019-04-04 15:15:18 INFO  BaseUtil:836 - Click on Target Environment Type
-2019-04-04 15:15:19 INFO  BaseUtil:848 - Select Target Environment Type
-2019-04-04 15:15:19 INFO  BaseUtil:860 - Select Target Environment Type
-2019-04-04 15:15:21 INFO  BaseUtil:872 - Click on Start Environment Release Icon
-2019-04-04 15:15:32 INFO  BaseUtil:72 - Click on Release List Tab
-2019-04-04 15:15:33 INFO  BaseUtil:82 - Click on Create New Release Button
-2019-04-04 15:15:34 INFO  BaseUtil:95 - Clcik and Select ReleaseType
-2019-04-04 15:15:34 INFO  BaseUtil:106 - Click on Release Textbox
-2019-04-04 15:15:34 INFO  BaseUtil:117 - Release Name :TestApril04_APP_Version12
-2019-04-04 15:15:35 INFO  BaseUtil:129 - Click on Project Field and Select Project
-2019-04-04 15:15:35 INFO  BaseUtil:142 - Click on Application Field and Select Application
-2019-04-04 15:15:36 INFO  BaseUtil:155 - Click on Release Plan Field and Select Release Plan
-2019-04-04 15:15:36 INFO  BaseUtil:191 - Click on Description
-2019-04-04 15:15:36 INFO  BaseUtil:201 - Description :Release Description
-2019-04-04 15:15:38 INFO  BaseUtil:212 - Click on Save and Next
-2019-04-04 15:15:39 INFO  BaseUtil:222 - Verify whether Release is Created or not
-2019-04-04 15:15:39 INFO  BaseUtil:237 - Click on Create New Environment Button
-2019-04-04 15:15:39 INFO  BaseUtil:250 - Click on Environment Name Field
-2019-04-04 15:15:40 INFO  BaseUtil:261 - EnvironmentName :New_Enironment_Version
-2019-04-04 15:15:40 INFO  BaseUtil:273 - Click Environment Type
-2019-04-04 15:15:40 INFO  BaseUtil:278 - Select Environment Type
-2019-04-04 15:15:41 INFO  BaseUtil:289 - Click Save
-2019-04-04 15:15:41 INFO  BaseUtil:300 - Verify whether Environment is Created or not
-2019-04-04 15:15:42 INFO  BaseUtil:314 - Click Create Workflow Icon
-2019-04-04 15:15:42 INFO  BaseUtil:337 - Click on Workflow Name Textbox
-2019-04-04 15:15:42 INFO  BaseUtil:347 - WorkflowName :ExistingTemplate
-2019-04-04 15:15:43 INFO  BaseUtil:651 - Click Use Template
-2019-04-04 15:15:43 INFO  BaseUtil:655 - Select Template
-2019-04-04 15:15:43 INFO  BaseUtil:666 - Click on Template Version
-2019-04-04 15:15:43 INFO  BaseUtil:671 - Select Template Version
-2019-04-04 15:15:43 INFO  BaseUtil:357 - Click Frequency
-2019-04-04 15:15:44 INFO  BaseUtil:361 - Select Frequency
-2019-04-04 15:15:44 INFO  BaseUtil:681 - Click Save
-2019-04-04 15:15:47 INFO  BaseUtil:693 - Click Save Workflow
-2019-04-04 15:15:53 INFO  BaseUtil:872 - Click on Start Environment Release Icon
-2019-04-04 15:16:04 INFO  BaseUtil:72 - Click on Release List Tab
-2019-04-04 15:16:04 INFO  BaseUtil:82 - Click on Create New Release Button
-2019-04-04 15:16:04 INFO  BaseUtil:106 - Click on Release Textbox
-2019-04-04 15:16:05 INFO  BaseUtil:117 - Release Name :TestApril04_Infra_Version7
-2019-04-04 15:16:05 INFO  BaseUtil:129 - Click on Project Field and Select Project
-2019-04-04 15:16:06 INFO  BaseUtil:168 - Click on Release Plan Field and Select Release Plan
-2019-04-04 15:16:06 INFO  BaseUtil:191 - Click on Description
-2019-04-04 15:16:07 INFO  BaseUtil:201 - Description :Release Description
-2019-04-04 15:16:09 INFO  BaseUtil:212 - Click on Save and Next
-2019-04-04 15:16:09 INFO  BaseUtil:897 - Verify whether Infrastructure Release is Created or not
-2019-04-04 15:16:11 INFO  BaseUtil:910 - Click on Environments Tab
-2019-04-04 15:16:11 INFO  BaseUtil:325 - Click Create Workflow Icon
-2019-04-04 15:16:12 INFO  BaseUtil:337 - Click on Workflow Name Textbox
-2019-04-04 15:16:12 INFO  BaseUtil:347 - WorkflowName :NewWFNAB
-2019-04-04 15:16:12 INFO  BaseUtil:357 - Click Frequency
-2019-04-04 15:16:12 INFO  BaseUtil:361 - Select Frequency
-2019-04-04 15:16:13 INFO  BaseUtil:681 - Click Save
-2019-04-04 15:16:13 INFO  BaseUtil:371 - Click on Add Stage
-2019-04-04 15:16:13 INFO  BaseUtil:375 - Stage Name :Maneesh
-2019-04-04 15:16:13 INFO  BaseUtil:386 - Click on Tick Mark
-2019-04-04 15:16:13 INFO  BaseUtil:396 - Click On Click To Task
-2019-04-04 15:16:13 INFO  BaseUtil:406 - Mouse Over on tracking
-2019-04-04 15:16:14 INFO  BaseUtil:411 - Mouse Over on bamboo
-2019-04-04 15:16:14 INFO  BaseUtil:416 - Click On Queue Build
-2019-04-04 15:16:14 INFO  BaseUtil:427 - Click On Task Name
-2019-04-04 15:16:14 INFO  BaseUtil:431 - Task Name:BambooTask
-2019-04-04 15:16:15 INFO  BaseUtil:441 - Click on Tick Mark to create task
-2019-04-04 15:16:15 INFO  BaseUtil:452 - Click on Vertical Ellipses
-2019-04-04 15:16:15 INFO  BaseUtil:463 - Click on Edit Configurations
-2019-04-04 15:16:15 INFO  BaseUtil:548 - Click on BambooHost
-2019-04-04 15:16:16 INFO  BaseUtil:553 - BambooHost :http://54.149.196.230
-2019-04-04 15:16:16 INFO  BaseUtil:560 - Click on Bamboo UserName
-2019-04-04 15:16:17 INFO  BaseUtil:565 - BambooUsername :matilda
-2019-04-04 15:16:17 INFO  BaseUtil:571 - Click on Bamboo Password
-2019-04-04 15:16:17 INFO  BaseUtil:576 - BambooPassword :matilda
-2019-04-04 15:16:17 INFO  BaseUtil:582 - Click on Bamboo Port
-2019-04-04 15:16:17 INFO  BaseUtil:587 - BambooPort :8050
-2019-04-04 15:16:18 INFO  BaseUtil:593 - Click on Bamboo Plan Key
-2019-04-04 15:16:18 INFO  BaseUtil:598 - BambooPlanKey :MAT-TEST
-2019-04-04 15:16:18 INFO  BaseUtil:604 - Click on Bamboo Project Key
-2019-04-04 15:16:19 INFO  BaseUtil:609 - BambooProjectkey :MAT
-2019-04-04 15:16:19 INFO  BaseUtil:615 - Click on Bamboo Build Key
-2019-04-04 15:16:19 INFO  BaseUtil:620 - BambooBuildKey :TEST
-2019-04-04 15:16:19 INFO  BaseUtil:626 - Click on Bamboo Job Key
-2019-04-04 15:16:20 INFO  BaseUtil:631 - BambooJobKey :Job
-2019-04-04 15:16:20 INFO  BaseUtil:637 - Click on Bamboo Build Key
-2019-04-04 15:16:23 INFO  BaseUtil:693 - Click Save Workflow
-2019-04-04 15:16:28 INFO  BaseUtil:910 - Click on Environments Tab
-2019-04-04 15:16:31 INFO  BaseUtil:704 - Click on View Workflow Icon
-2019-04-04 15:16:31 INFO  BaseUtil:715 - Click on Save as Template
-2019-04-04 15:16:31 INFO  BaseUtil:726 - Click on Template Name Textbox
-2019-04-04 15:16:32 INFO  BaseUtil:736 - Template Name :Template_April04
-2019-04-04 15:16:33 INFO  BaseUtil:748 - Click on Save Template button
-2019-04-04 15:16:35 INFO  BaseUtil:910 - Click on Environments Tab
-2019-04-04 15:16:38 INFO  BaseUtil:801 - Click on Clone Environment
-2019-04-04 15:16:38 INFO  BaseUtil:813 - Click on Template Name Textbox
-2019-04-04 15:16:39 INFO  BaseUtil:824 - Target Environment Name :New_TargetEnvironment_April04
-2019-04-04 15:16:39 INFO  BaseUtil:836 - Click on Target Environment Type
-2019-04-04 15:16:40 INFO  BaseUtil:848 - Select Target Environment Type
-2019-04-04 15:16:40 INFO  BaseUtil:860 - Select Target Environment Type
-2019-04-04 15:16:42 INFO  BaseUtil:872 - Click on Start Environment Release Icon
-2019-04-04 15:16:56 INFO  Hook:81 - Chrome Browser Closed Successfully
+2020-01-03 10:19:18 INFO  Hook:71 - Chrome Browser Launched Successfully
+2020-01-03 10:19:46 INFO  ReusableSteps:77 - Enter Matilda URL in the address bar of the browser
+2020-01-03 10:19:47 INFO  ReusableSteps:132 - Entered Username
+2020-01-03 10:19:47 INFO  ReusableSteps:138 - Entered Password
+2020-01-03 10:19:47 INFO  ReusableSteps:143 - Clicked on Sign In Button
+2020-01-03 10:19:49 INFO  BaseUtil:942 - Click Click on Release Plan Link
+2020-01-03 10:19:51 INFO  BaseUtil:955 - Click Click on Click on Create Release Plan Button
+2020-01-03 10:19:52 INFO  BaseUtil:968 - Click and Select ReleaseType
+2020-01-03 10:19:53 INFO  BaseUtil:981 - Click on Date Picker and Select Release Plan Date
+2020-01-03 10:19:53 INFO  BaseUtil:993 - Click on Release Plan Name
+2020-01-03 10:19:54 INFO  BaseUtil:999 - RelasePlanName :Release-Plan-Infra-03
+2020-01-03 10:19:54 INFO  BaseUtil:1005 - Click on Description
+2020-01-03 10:19:54 INFO  BaseUtil:1010 - Description :Infra Release Plan
+2020-01-03 10:19:55 INFO  BaseUtil:1016 - Click on Owner
+2020-01-03 10:19:55 INFO  BaseUtil:1021 - Owner :QA
+2020-01-03 10:19:55 INFO  BaseUtil:1028 - Click on Owner
+2020-01-03 10:19:58 INFO  BaseUtil:109 - Click on Release Textbox
+2020-01-03 10:19:59 INFO  BaseUtil:120 - Release Name :Jan_Phase1_Sprint1_Release10
+2020-01-03 10:20:00 INFO  BaseUtil:1043 - Click and Select Platform
+2020-01-03 10:20:00 INFO  BaseUtil:228 - Click on Description
+2020-01-03 10:20:00 INFO  BaseUtil:238 - Description :Infra Release Plan
+2020-01-03 10:20:01 INFO  BaseUtil:1056 - Click and Select Infra Release Plan
+2020-01-03 10:20:01 INFO  BaseUtil:192 - Click on Template Field and Select Template
+2020-01-03 10:20:03 INFO  BaseUtil:249 - Click on Save and Next
+2020-01-03 10:20:05 INFO  BaseUtil:269 - Click on Workflow Tab
+2020-01-03 10:20:05 INFO  BaseUtil:408 - Click on Start Release Button
+2020-01-03 10:20:09 INFO  BaseUtil:421 - Click on View Workflow Button
+2020-01-03 10:20:10 INFO  BaseUtil:1099 - Click on Pause Release Button
+2020-01-03 10:20:15 INFO  BaseUtil:1137 - Click on Resume Release Button
+2020-01-03 10:20:16 INFO  Hook:83 - Chrome Browser Closed Successfully

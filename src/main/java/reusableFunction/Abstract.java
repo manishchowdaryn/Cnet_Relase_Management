@@ -93,7 +93,7 @@ public class Abstract extends BaseUtil {
 			FluentWait<WebDriver> waitforuntilText = new FluentWait<WebDriver>(base.driver)
 					.withTimeout(5, TimeUnit.SECONDS).pollingEvery(60, TimeUnit.MILLISECONDS)
 					.ignoring(NoSuchElementException.class);
-			waitforuntilText.until(ExpectedConditions.textToBePresentInElement(By.xpath("//td[3]/p/span"), "Success"));
+			waitforuntilText.until(ExpectedConditions.textToBePresentInElement(By.xpath("//span/span"), "SUCCESS"));
 		} catch (NoSuchElementException exc) {
 			exc.printStackTrace();
 
